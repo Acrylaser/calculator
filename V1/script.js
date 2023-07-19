@@ -1,5 +1,5 @@
 const categories = {
-  "Acrílico a medida": ["Cristal u Opal", "Colores", "Espejo", "Brush"], //check
+  "Acrílico a medida": ["Cristal u Opal (A)", "Colores (A)", "Espejo (A)", "Brush (A)"], //check
   "MDF a medida": ["MDF 2.5mm/2.7mm", "MDF 5.5mm", "MDF 9mm", "MDF 12mm"], //check
   "Vinilo a medida": ["Regular", "Brush", "Fotoluminiscente 5h", "Fotoluminiscente 10h", "Transfer"],//check
   "Impresión": ["Vinilo laminado", "Vinilo laminado en espejo", "Banner"],//check
@@ -11,10 +11,10 @@ const categories = {
 };
 
 const materials = {
-  "Cristal u Opal": ["2mm", "3mm", "4mm", "5mm", "8mm", "10mm"],//check
-  "Colores": ["2mm", "3mm", "4mm", "5mm"],//check
-  "Espejo": ["3mm"],//check
-  "Brush": ["3mm"],//check
+  "Cristal u Opal (A)": ["2mm", "3mm", "4mm", "5mm", "8mm", "10mm"],//check
+  "Colores (A)": ["2mm", "3mm", "4mm", "5mm"],//check
+  "Espejo (A)": ["3mm"],//check
+  "Brush (A)": ["3mm"],//check
 
   "MDF 2.5mm/2.7mm": ["-"],//check
   "MDF 5.5mm": ["-"],//check
@@ -46,7 +46,7 @@ const materials = {
 
 const prices = {
   "Acrílico a medida": {
-    "Cristal u Opal": {
+    "Cristal u Opal (A)": {
         "2mm": 16,
         "3mm": 20,
         "4mm": 25,
@@ -54,16 +54,16 @@ const prices = {
         "8mm": 46,
         "10mm": 57
     },
-    "Colores": {
+    "Colores (A)": {
         "2mm": 18,
         "3mm": 22,
         "4mm": 27,
         "5mm": 35
     },
-    "Espejo": {
+    "Espejo (A)": {
         "3mm": 28
     },
-    "Brush": {
+    "Brush (A)": {
       "3mm": 34
     }
   },
@@ -75,10 +75,10 @@ const prices = {
       "-": 5
     },
     "MDF 9mm": {
-      "-": 5
+      "-": 9
     },
     "MDF 12mm": {
-      "-": 5
+      "-": 12
     }
   },
   "Vinilo a medida": {
