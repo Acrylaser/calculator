@@ -1,0 +1,126 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Calculator container */
+  #calculator {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  /* Product entry styles */
+  .product {
+    margin-bottom: 10px;
+  }
+  
+  /* Select elements */
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  /* Input elements */
+  input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  /* Cost display */
+  span {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  /* Total cost display */
+  h3 {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  /* Add button */
+  #add {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+  }
+  
+  #add:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for product list items */
+  #products {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Styling for product list item */
+  .product-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Styling for category, material, and caliber select elements */
+  .product-item select {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  /* Styling for width and height input elements */
+  .product-item input[type="number"] {
+    width: 60px;
+    text-align: right;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 500px) {
+    .product-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .product-item select,
+    .product-item input[type="number"] {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  
+  /* Custom styling for the total cost display */
+  #total {
+    color: #4CAF50;
+    font-size: 1.2rem;
+  }
+  
