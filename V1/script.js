@@ -262,3 +262,87 @@ addButton.addEventListener("click", () => {
   
   productsDiv.appendChild(productDiv);
 });
+
+
+// Save button click event
+const saveButton = document.querySelector("#save");
+saveButton.addEventListener("click", () => {
+  const title = document.querySelector("#title").value.trim();
+  const observations = document.querySelector("#observations").value.trim();
+  const products = [];
+
+  for (const productDiv of productsDiv.querySelectorAll(".product")) {
+    const category = productDiv.querySelector("select:nth-child(1)").value;
+    const material = productDiv.querySelector("select:nth-child(2)").value;
+    const caliber = productDiv.querySelector("select:nth-child(3)").value;
+    const width = productDiv.querySelector("input[type='number']:nth-child(4)").value;
+    const height = productDiv.querySelector("input[type='number']:nth-child(5)").value;
+    const cost = productDiv.querySelector("span").textContent.slice(1);
+
+    products.push({ category, material, caliber, width, height, cost });
+  }
+
+  if (title === "") {
+    alert("Please enter a title before saving.");
+    return;
+  }
+
+  const currentDate = new Date();
+  const year = currentDate.getFullYear().toString().slice(-2);
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+  const day = String(currentDate.getDate()).padStart(2, "0");
+  const hours = String(currentDate.getHours()).padStart(2, "0");
+  const minutes = String(currentDate.getMinutes()).padStart(2, "0");
+  const fileName = `COT_${year}${month}${day}_${hours}${minutes}_${title}.json`;
+
+  const data = { title, observations, products };
+  const jsonData = JSON.stringify(data, null, 2);
+  const blob = new Blob([jsonData], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  link.click();
+});
+
+
+// Load button change event
+const loadInput = document.querySelector("#load");
+loadInput.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    const data = JSON.parse(event.target.result);
+    document.querySelector("#title").value = data.title;
+    document.querySelector("#observations").value = data.observations;
+
+    productsDiv.innerHTML = ""; // Clear existing products
+
+    data.products.forEach((product) => {
+      addButton.click(); // Add new product div
+      const productDiv = productsDiv.lastElementChild;
+
+      productDiv.querySelector("select:nth-child(1)").value = product.category;
+      productDiv.querySelector("select:nth-child(1)").dispatchEvent(new Event("change"));
+
+      productDiv.querySelector("select:nth-child(2)").value = product.material;
+      productDiv.querySelector("select:nth-child(2)").dispatchEvent(new Event("change"));
+
+      productDiv.querySelector("select:nth-child(3)").value = product.caliber;
+      productDiv.querySelector("select:nth-child(3)").dispatchEvent(new Event("change"));
+
+      productDiv.querySelector("input[type='number']:nth-child(4)").value = product.width;
+      productDiv.querySelector("input[type='number']:nth-child(4)").dispatchEvent(new Event("input"));
+
+      productDiv.querySelector("input[type='number']:nth-child(5)").value = product.height;
+      productDiv.querySelector("input[type='number']:nth-child(5)").dispatchEvent(new Event("input"));
+    });
+
+    // Update the cost once all products are loaded
+    updateTotal();
+  };
+
+  reader.readAsText(file);
+});

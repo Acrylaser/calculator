@@ -9,8 +9,20 @@
   <div class="container">
     <h2>Product Calculator</h2>
     <div id="calculator">
+      <!-- Add the following code inside the <div id="calculator"> -->
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" />
+      </div>
+      <div>
+        <label for="observations">Observations:</label>
+        <textarea id="observations" rows="4"></textarea>
+      </div>
+
       <div id="products"></div>
       <button id="add">Add Product</button>
+      <button id="save">Save Quotation</button>
+      <input type="file" id="load" accept=".json" />
       <h3>Total Cost: $<span id="total">0</span></h3>
     </div>
   </div>
