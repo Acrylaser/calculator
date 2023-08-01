@@ -178,16 +178,16 @@ addButton.addEventListener("click", () => {
   productDiv.classList.add("product");
 
   const categorySelect = document.createElement("select");
-  categorySelect.innerHTML = `<option disabled selected>Category</option>`;
+  categorySelect.innerHTML = `<option disabled selected>Seleccione</option>`;
   for (const category in categories) {
       categorySelect.innerHTML += `<option>${category}</option>`;
   }
   
   const materialSelect = document.createElement("select");
-  materialSelect.innerHTML = `<option disabled selected>Material</option>`;
+  materialSelect.innerHTML = `<option disabled selected>Seleccione</option>`;
   
   const caliberSelect = document.createElement("select");
-  caliberSelect.innerHTML = `<option disabled selected>Caliber</option>`;
+  caliberSelect.innerHTML = `<option disabled selected>Seleccione</option>`;
   
   const widthInput = document.createElement("input");
   widthInput.type = "number";
