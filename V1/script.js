@@ -1,170 +1,173 @@
 const categories = {
-  "Acrílico a medida": ["Cristal u Opal (A)", "Colores (A)", "Espejo (A)", "Brush (A)"], //check
-  "MDF a medida": ["MDF 2.5mm/2.7mm", "MDF 5.5mm", "MDF 9mm", "MDF 12mm"], //check
-  "Vinilo a medida": ["Regular", "Brush", "Fotoluminiscente 5h", "Fotoluminiscente 10h", "Transfer"],//check
-  "Impresión": ["Vinilo laminado", "Vinilo laminado en espejo", "Banner"],//check
-  "Poliestireno a medida":["Blanco u Opal (P)", "Colores (P)"],//check
-  "Eléctricos":["Neón Flex", "Fuente"],//check
-  "Herrajes": ["Cerradura", "Bisagra acrílica", "Dilatador"],//check
-  "Mano de obra": ["-"],
-  "Otros": ["-"]
+  "Acrílico a medida": ['Cristal u Opal (A)', 'Colores (A)', 'Espejo (A)', 'Brush (A)'],
+  "MDF a medida": ['MDF 2.5mm/2.7mm', 'MDF 5.5mm', 'MDF 9mm', 'MDF 12mm'],
+  "Vinilo a medida": ['Regular', 'Brush', 'Fotoluminiscente 5h', 'Fotoluminiscente 10h', 'Transfer'],
+  "Impresión": ['Vinilo laminado', 'Vinilo laminado en espejo', 'Banner'],
+  "Poliestireno a medida": ['Blanco u Opal (P)', 'Colores (P)'],
+  "Eléctricos": ['Neón Flex', 'Fuente'],
+  "Herrajes": ['Cerradura', 'Bisagra acrílica', 'Dilatador'],
+  "Corte/Grabado": ['Tiempo', 'Grabado'],
+  "Mano de obra": ['-'],
+  "Otros": ['-'],
 };
 
 const materials = {
-  "Cristal u Opal (A)": ["2mm", "3mm", "4mm", "5mm", "8mm", "10mm"],//check
-  "Colores (A)": ["2mm", "3mm", "4mm", "5mm"],//check
-  "Espejo (A)": ["3mm"],//check
-  "Brush (A)": ["3mm"],//check
-
-  "MDF 2.5mm/2.7mm": ["-"],//check
-  "MDF 5.5mm": ["-"],//check
-  "MDF 9mm": ["-"],//check
-  "MDF 12mm": ["-"],//check
-
-  "Regular": ["-"],//check
-  "Brush": ["-"],//check
-  "Fotoluminiscente 5h": ["-"],//check
-  "Fotoluminiscente 10h": ["-"],//check
-  "Transfer": ["-"],//check
-
-  "Vinilo laminado": ["-"],//check
-  "Vinilo laminado en espejo": ["-"],//check
-  "Banner": ["-"],//check
-
-  "Blanco u Opal (P)": ["40(1mm)", "60(1.5mm)", "80(2mm)", "100(2.5mm)"],//check
-  "Colores (P)" : ["40(1mm)", "60(1.5mm)", "80(2mm)", "100(2.5mm)"],//check
-
-  "Neón Flex" : ["Metro instalado", "Metro suelto"],
-  "Fuente" : ["12V-1A", "12V-2A", "12V-3A", "12V-5A", "12V-10A"],
-
-  "Cerradura":["Grande", "Pequeña"],
-  "Bisagra acrílica":["Grande", "Mediana", "Pequeña"],
-  "Dilatador":["D2xA2"],
-
-  "-":["-"]
+  "Cristal u Opal (A)": ['2mm', '3mm', '4mm', '5mm', '8mm', '10mm'],
+  "Colores (A)": ['2mm', '3mm', '4mm', '5mm'],
+  "Espejo (A)": ['3mm'],
+  "Brush (A)": ['3mm'],
+  "MDF 2.5mm/2.7mm": ['MDF 2.5mm/2.7mm'],
+  "MDF 5.5mm": ['MDF 5.5mm'],
+  "MDF 9mm": ['MDF 9mm'],
+  "MDF 12mm": ['MDF 12mm'],
+  "Regular": ['Regular'],
+  "Brush": ['Brush'],
+  "Fotoluminiscente 5h": ['Fotoluminiscente 5h'],
+  "Fotoluminiscente 10h": ['Fotoluminiscente 10h'],
+  "Transfer": ['Transfer'],
+  "Vinilo laminado": ['Vinilo laminado'],
+  "Vinilo laminado en espejo": ['Vinilo laminado en espejo'],
+  "Banner": ['-'],
+  "Blanco u Opal (P)": ['40(1mm)', '60(1.5mm)', '80(2mm)', '100(2.5mm)'],
+  "Colores (P)": ['40(1mm)', '60(1.5mm)', '80(2mm)', '100(2.5mm)'],
+  "Neón Flex": ['Metro instalado', 'Metro suelto'],
+  "Fuente": ['12V-1A', '12V-2A', '12V-3A', '12V-5A', '12V-10A'],
+  "Cerradura": ['Grande', 'Pequeña'],
+  "Bisagra acrílica": ['Grande', 'Mediana', 'Pequeña'],
+  "Dilatador": ['D2xA2'],
+  "Tiempo": ['Tiempo (minutos)'],
+  "Grabado": ['Tiempo (minutos)', 'Grueso (0.1mm)', 'Medio (0.075mm)', 'Fino (0.05mm)'],
+  "-": ['-'],
 };
 
 const prices = {
   "Acrílico a medida": {
     "Cristal u Opal (A)": {
-        "2mm": 16,
-        "3mm": 20,
-        "4mm": 25,
-        "5mm": 32,
-        "8mm": 46,
-        "10mm": 57
+      "2mm": 16.0,
+      "3mm": 20.0,
+      "4mm": 25.0,
+      "5mm": 32.0,
+      "8mm": 46.0,
+      "10mm": 57.0,
     },
     "Colores (A)": {
-        "2mm": 18,
-        "3mm": 22,
-        "4mm": 27,
-        "5mm": 35
+      "2mm": 18.0,
+      "3mm": 22.0,
+      "4mm": 27.0,
+      "5mm": 35.0,
     },
     "Espejo (A)": {
-        "3mm": 28
+      "3mm": 28.0,
     },
     "Brush (A)": {
-      "3mm": 34
-    }
+      "3mm": 34.0,
+    },
   },
   "MDF a medida": {
     "MDF 2.5mm/2.7mm": {
-        "-": 2
+      "MDF 2.5mm/2.7mm": 2.0,
     },
     "MDF 5.5mm": {
-      "-": 5
+      "MDF 5.5mm": 5.0,
     },
     "MDF 9mm": {
-      "-": 9
+      "MDF 9mm": 9.0,
     },
     "MDF 12mm": {
-      "-": 12
-    }
+      "MDF 12mm": 12.0,
+    },
   },
   "Vinilo a medida": {
-    "Regular":{
-      "-":2
+    "Regular": {
+      "Regular": 2.0,
     },
-    "Brush":{
-      "-":4
+    "Brush": {
+      "Brush": 4.0,
     },
-    "Fotoluminiscente 5h":{
-      "-":10
+    "Fotoluminiscente 5h": {
+      "Fotoluminiscente 5h": 10.0,
     },
-    "Fotoluminiscente 10h":{
-      "-":20
+    "Fotoluminiscente 10h": {
+      "Fotoluminiscente 10h": 20.0,
     },
-    "Transfer":{
-      "-":1.5
-    }
+    "Transfer": {
+      "Transfer": 1.5,
+    },
   },
-
   "Impresión": {
-    "Vinilo laminado":{
-      "-":6
+    "Vinilo laminado": {
+      "Vinilo laminado": 6.0,
     },
-    "Vinilo laminado en espejo":{
-      "-":6.5
+    "Vinilo laminado en espejo": {
+      "Vinilo laminado en espejo": 6.5,
     },
-    "Banner":{
-      "-":7
-    }
+    "Banner": {
+      "-": 8.0,
+    },
   },
-
-"Poliestireno a medida": {
+  "Poliestireno a medida": {
     "Blanco u Opal (P)": {
       "40(1mm)": 3.5,
-      "60(1.5mm)": 5,
+      "60(1.5mm)": 5.0,
       "80(2mm)": 6.5,
-      "100(2.5mm)": 8
+      "100(2.5mm)": 8.0,
     },
     "Colores (P)": {
       "40(1mm)": 3.5,
-      "60(1.5mm)": 5,
+      "60(1.5mm)": 5.0,
       "80(2mm)": 6.5,
-      "100(2.5mm)": 8
-    }
+      "100(2.5mm)": 8.0,
+    },
   },
-
   "Eléctricos": {
     "Neón Flex": {
-      "Metro instalado": 30000,
-      "Metro suelto": 15000
+      "Metro instalado": 30000.0,
+      "Metro suelto": 15000.0,
     },
     "Fuente": {
-      "12V-1A": 10,
-      "12V-2A": 18,
-      "12V-3A": 25,
-      "12V-5A": 40,
-      "12V-10A": 70
-    }
-  },
-
-  "Herrajes":{
-    "Cerradura":{
-      "Grande": 6000,
-      "Pequeña": 4000
+      "12V-1A": 10000.0,
+      "12V-2A": 18000.0,
+      "12V-3A": 25000.0,
+      "12V-5A": 40000.0,
+      "12V-10A": 70000.0,
     },
-    "Bisagra acrílica":{
-      "Grande": 3000,
-      "Mediana": 4500,
-      "Pequeña": 6000
+  },
+  "Herrajes": {
+    "Cerradura": {
+      "Grande": 6000.0,
+      "Pequeña": 4000.0,
     },
-    "Dilatador":{
-      "D2xA2":6000
-    }, 
+    "Bisagra acrílica": {
+      "Grande": 3000.0,
+      "Mediana": 4500.0,
+      "Pequeña": 6000.0,
+    },
+    "Dilatador": {
+      "D2xA2": 6000.0,
+    },
   },
-  "Mano de obra":{
-    "-":{
-      "-":1
-    }
+  "Corte/Grabado": {
+    "Tiempo": {
+      "Tiempo (minutos)": 1000.0,
+    },
+    "Grabado": {
+      "Tiempo (minutos)": 1000.0,
+      "Grueso (0.1mm)": 60.5,
+      "Medio (0.075mm)": 80.5,
+      "Fino (0.05mm)": 12.2,
+    },
   },
-  "Otros":{
-    "-":{
-      "-":1
-    }
-  }
-}
+  "Mano de obra": {
+    "-": {
+      "-": 1.0,
+    },
+  },
+  "Otros": {
+    "-": {
+      "-": 1.0,
+    },
+  },
+};
 
 const productsDiv = document.querySelector("#products");
 const totalSpan = document.querySelector("#total");
