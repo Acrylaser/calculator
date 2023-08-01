@@ -7,23 +7,24 @@
 </head>
 <body>
   <div class="container">
-    <h2>Product Calculator</h2>
+    <h2>Calculadora de Cotizaciones</h2>
+    <h3> Uso interno de Acrylaser Exclusivamente</h3>
     <div id="calculator">
       <!-- Add the following code inside the <div id="calculator"> -->
       <div>
-        <label for="title">Title:</label>
+        <label for="title">Título:</label>
         <input type="text" id="title" />
       </div>
       <div>
-        <label for="observations">Observations:</label>
+        <label for="observations">Observaciones:</label>
         <textarea id="observations" rows="4"></textarea>
       </div>
 
       <div id="products"></div>
-      <button id="add">Add Product</button>
-      <button id="save">Save Quotation</button>
+      <button id="add">Agregar Elemento</button>
+      <button id="save">Guardar Cotización</button>
       <input type="file" id="load" accept=".json" />
-      <h3>Total Cost: $<span id="total">0</span></h3>
+      <h3>Costo Total: $<span id="total">0</span></h3>
     </div>
   </div>
   <script src="script.js"></script>
