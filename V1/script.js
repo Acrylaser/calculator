@@ -6,10 +6,10 @@ const categories = {
   "Poliestireno a medida": ['Blanco u Opal (P)', 'Colores (P)'],
   "Eléctricos": ['Neón Flex', 'Fuente'],
   "Herrajes": ['Cerradura', 'Bisagra acrílica', 'Dilatador'],
-  "Letras cantoneradas": ['Con luz', 'Sin Luz', 'Sin luz'],
+  "Letras cantoneradas": ['Con luz', 'Sin luz'],
   "Mano de obra": ['-'],
   "Otros": ['-'],
-};
+}
 
 const materials = {
   "Cristal u Opal (A)": ['2mm', '3mm', '4mm', '5mm', '8mm', '10mm'],
@@ -36,10 +36,9 @@ const materials = {
   "Bisagra acrílica": ['Pequeña (30X34mm)', 'Mediana (35X45mm)', 'Grande (40X65mm)', 'Muy Grande (40X100mm)', 'Un metro'],
   "Dilatador": ['D2xA2'],
   "Con luz": ['Color', 'Brush (Silver)'],
-  "Sin Luz": ['Color'],
-  "Sin luz": ['Brush (Silver)'],
+  "Sin luz": ['Color', 'Brush (Silver)'],
   "-": ['-'],
-};
+}
 
 const prices = {
   "Acrílico a medida": {
@@ -154,10 +153,8 @@ const prices = {
       "Color": 4500.0,
       "Brush (Silver)": 4900.0,
     },
-    "Sin Luz": {
-      "Color": 2300.0,
-    },
     "Sin luz": {
+      "Color": 2300.0,
       "Brush (Silver)": 2700.0,
     },
   },
@@ -171,7 +168,7 @@ const prices = {
       "-": 1.0,
     },
   },
-};
+}
 
 
 const productsDiv = document.querySelector("#products");
@@ -314,7 +311,7 @@ saveButton.addEventListener("click", () => {
   const minutes = String(currentDate.getMinutes()).padStart(2, "0");
   const fileName = `COT_${year}${month}${day}_${hours}${minutes}_${title}.json`;
 
-  const data = { title, observations, products };
+  const data = { title, observations, products }
   const jsonData = JSON.stringify(data, null, 2);
   const blob = new Blob([jsonData], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -361,7 +358,7 @@ loadInput.addEventListener("change", (event) => {
 
     // Update the cost once all products are loaded
     updateTotal();
-  };
+  }
 
   reader.readAsText(file);
 });
