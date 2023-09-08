@@ -151,12 +151,12 @@ const prices = {
   },
   "Letras cantoneradas": {
     "Color_LC": {
-      " Con luz_C": 4500.0,
-      " Sin luz_C": 4500.0,
+      "Con luz_C": 4500.0,
+      "Sin luz_C": 2300.0,
     },
     "Brush (Silver)_LC": {
-      " Con luz_B": 4500.0,
-      " Sin luz_B": 4500.0,
+      "Con luz_B": 4900.0,
+      "Sin luz_B": 2700.0,
     },
   },
   "Corte/Grabado": {
