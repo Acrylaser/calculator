@@ -6,7 +6,7 @@ const categories = {
   "Poliestireno a medida": ['Blanco u Opal (P)', 'Colores (P)'],
   "Eléctricos": ['Neón Flex', 'Fuente'],
   "Herrajes": ['Cerradura', 'Bisagra acrílica', 'Dilatador'],
-  "Letras cantoneradas": ['Color', 'Brush (Silver)'],
+  "Letras cantoneradas": ['Color_LC', 'Brush (Silver)'],
   "Corte/Grabado": ['Tiempo', 'Grabado'],
   "Mano de obra": ['-'],
   "Otros": ['-'],
@@ -36,7 +36,7 @@ const materials = {
   "Cerradura": ['Grande', 'Pequeña'],
   "Bisagra acrílica": ['Grande', 'Mediana', 'Pequeña'],
   "Dilatador": ['D2xA2'],
-  "Color": [' Con luz_C', ' Sin luz_C'],
+  "Color_LC": [' Con luz_C', ' Sin luz_C'],
   "Brush (Silver)": [' Con luz_B', ' Sin luz_B'],
   "Tiempo": ['Tiempo (minutos)'],
   "Grabado": ['Tiempo (minutos)', 'Grueso (0.1mm)', 'Medio (0.075mm)', 'Fino (0.05mm)'],
@@ -150,7 +150,7 @@ const prices = {
     },
   },
   "Letras cantoneradas": {
-    "Color": {
+    "Color_LC": {
       " Con luz_C": 4500.0,
       " Sin luz_C": 4500.0,
     },
@@ -181,6 +181,7 @@ const prices = {
     },
   },
 };
+
 
 
 
