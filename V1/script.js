@@ -1,44 +1,47 @@
 const categories = {
-  "Acrílico a medida": ['Cristal u Opal (A)', 'Colores (A)', 'Espejo (A)', 'Brush (Silver) (A)'],
+  "Acrílico a medida": ['Cristal u Opal (A)', 'Colores (A)', 'Espejo (A)', 'Brush (A)'],
   "MDF a medida": ['MDF 2.5mm/2.7mm', 'MDF 5.5mm', 'MDF 9mm', 'MDF 12mm'],
-  "Vinilo a medida": ['Regular', 'Brush (Silver)', 'Fotoluminiscente 5h', 'Fotoluminiscente 10h', 'Transfer'],
+  "Vinilo a medida": ['Regular', 'Brush', 'Fotoluminiscente 5h', 'Fotoluminiscente 10h', 'Transfer'],
   "Impresión": ['Vinilo laminado', 'Vinilo laminado en espejo', 'Banner'],
   "Poliestireno a medida": ['Blanco u Opal (P)', 'Colores (P)'],
   "Eléctricos": ['Neón Flex', 'Fuente'],
   "Herrajes": ['Cerradura', 'Bisagra acrílica', 'Dilatador'],
-  "Letras cantoneradas": ['Con luz', 'Sin luz'],
+  "Letras cantoneradas": ['Color', 'Brush (Silver)'],
+  "Corte/Grabado": ['Tiempo', 'Grabado'],
   "Mano de obra": ['-'],
   "Otros": ['-'],
-}
+};
 
 const materials = {
   "Cristal u Opal (A)": ['2mm', '3mm', '4mm', '5mm', '8mm', '10mm'],
   "Colores (A)": ['2mm', '3mm', '4mm', '5mm'],
   "Espejo (A)": ['3mm'],
-  "Brush (Silver) (A)": ['3mm'],
-  "MDF 2.5mm/2.7mm": ['-'],
-  "MDF 5.5mm": ['-'],
-  "MDF 9mm": ['-'],
-  "MDF 12mm": ['-'],
-  "Regular": ['-'],
-  "Brush (Silver)": ['-'],
-  "Fotoluminiscente 5h": ['-'],
-  "Fotoluminiscente 10h": ['-'],
-  "Transfer": ['-'],
-  "Vinilo laminado": ['-'],
-  "Vinilo laminado en espejo": ['-'],
+  "Brush (A)": ['3mm'],
+  "MDF 2.5mm/2.7mm": ['MDF 2.5mm/2.7mm'],
+  "MDF 5.5mm": ['MDF 5.5mm'],
+  "MDF 9mm": ['MDF 9mm'],
+  "MDF 12mm": ['MDF 12mm'],
+  "Regular": ['Regular'],
+  "Brush": ['Brush'],
+  "Fotoluminiscente 5h": ['Fotoluminiscente 5h'],
+  "Fotoluminiscente 10h": ['Fotoluminiscente 10h'],
+  "Transfer": ['Transfer'],
+  "Vinilo laminado": ['Vinilo laminado'],
+  "Vinilo laminado en espejo": ['Vinilo laminado en espejo'],
   "Banner": ['-'],
   "Blanco u Opal (P)": ['40(1mm)', '60(1.5mm)', '80(2mm)', '100(2.5mm)'],
   "Colores (P)": ['40(1mm)', '60(1.5mm)', '80(2mm)', '100(2.5mm)'],
   "Neón Flex": ['Metro instalado', 'Metro suelto'],
   "Fuente": ['12V-1A', '12V-2A', '12V-3A', '12V-5A', '12V-10A'],
   "Cerradura": ['Grande', 'Pequeña'],
-  "Bisagra acrílica": ['Pequeña (30X34mm)', 'Mediana (35X45mm)', 'Grande (40X65mm)', 'Muy Grande (40X100mm)', 'Un metro'],
+  "Bisagra acrílica": ['Grande', 'Mediana', 'Pequeña'],
   "Dilatador": ['D2xA2'],
-  "Con luz": ['Color', 'Brush (Silver)'],
-  "Sin luz": ['Color', 'Brush (Silver)'],
+  "Color": [' Con luz_C', ' Sin luz_C'],
+  "Brush (Silver)": [' Con luz_B', ' Sin luz_B'],
+  "Tiempo": ['Tiempo (minutos)'],
+  "Grabado": ['Tiempo (minutos)', 'Grueso (0.1mm)', 'Medio (0.075mm)', 'Fino (0.05mm)'],
   "-": ['-'],
-}
+};
 
 const prices = {
   "Acrílico a medida": {
@@ -59,50 +62,50 @@ const prices = {
     "Espejo (A)": {
       "3mm": 28.0,
     },
-    "Brush (Silver) (A)": {
+    "Brush (A)": {
       "3mm": 34.0,
     },
   },
   "MDF a medida": {
     "MDF 2.5mm/2.7mm": {
-      "-": 2.0,
+      "MDF 2.5mm/2.7mm": 2.0,
     },
     "MDF 5.5mm": {
-      "-": 5.0,
+      "MDF 5.5mm": 5.0,
     },
     "MDF 9mm": {
-      "-": 9.0,
+      "MDF 9mm": 9.0,
     },
     "MDF 12mm": {
-      "-": 12.0,
+      "MDF 12mm": 12.0,
     },
   },
   "Vinilo a medida": {
     "Regular": {
-      "-": 2.0,
+      "Regular": 2.0,
     },
-    "Brush (Silver)": {
-      "-": 4.0,
+    "Brush": {
+      "Brush": 4.0,
     },
     "Fotoluminiscente 5h": {
-      "-": 10.0,
+      "Fotoluminiscente 5h": 10.0,
     },
     "Fotoluminiscente 10h": {
-      "-": 20.0,
+      "Fotoluminiscente 10h": 20.0,
     },
     "Transfer": {
-      "-": 1.5,
+      "Transfer": 1.5,
     },
   },
   "Impresión": {
     "Vinilo laminado": {
-      "-": 6.0,
+      "Vinilo laminado": 6.0,
     },
     "Vinilo laminado en espejo": {
-      "-": 6.5,
+      "Vinilo laminado en espejo": 6.5,
     },
     "Banner": {
-      "-": 7.0,
+      "-": 8.0,
     },
   },
   "Poliestireno a medida": {
@@ -138,24 +141,33 @@ const prices = {
       "Pequeña": 4000.0,
     },
     "Bisagra acrílica": {
-      "Pequeña (30X34mm)": 3000.0,
-      "Mediana (35X45mm)": 4500.0,
-      "Grande (40X65mm)": 6000.0,
-      "Muy Grande (40X100mm)": 9000.0,
-      "Un metro": 45000.0,
+      "Grande": 3000.0,
+      "Mediana": 4500.0,
+      "Pequeña": 6000.0,
     },
     "Dilatador": {
       "D2xA2": 6000.0,
     },
   },
   "Letras cantoneradas": {
-    "Con luz": {
-      "Color": 4500.0,
-      "Brush (Silver)": 4900.0,
+    "Color": {
+      " Con luz_C": 4500.0,
+      " Sin luz_C": 4500.0,
     },
-    "Sin luz": {
-      "Color": 2300.0,
-      "Brush (Silver)": 2700.0,
+    "Brush (Silver)": {
+      " Con luz_B": 4500.0,
+      " Sin luz_B": 4500.0,
+    },
+  },
+  "Corte/Grabado": {
+    "Tiempo": {
+      "Tiempo (minutos)": 1000.0,
+    },
+    "Grabado": {
+      "Tiempo (minutos)": 1000.0,
+      "Grueso (0.1mm)": 60.5,
+      "Medio (0.075mm)": 80.5,
+      "Fino (0.05mm)": 12.2,
     },
   },
   "Mano de obra": {
@@ -168,7 +180,8 @@ const prices = {
       "-": 1.0,
     },
   },
-}
+};
+
 
 
 const productsDiv = document.querySelector("#products");
