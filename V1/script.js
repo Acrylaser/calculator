@@ -226,6 +226,8 @@ addButton.addEventListener("click", () => {
   
   caliberSelect.addEventListener("change", updateCost);
   
+  quantityInput.addEventListener("input", updateCost);
+
   widthInput.addEventListener("input", updateCost);
   
   heightInput.addEventListener("input", updateCost);
@@ -234,8 +236,8 @@ addButton.addEventListener("click", () => {
     if (categorySelect.value && materialSelect.value && caliberSelect.value && widthInput.value && heightInput.value && quantityInput.value) {
       const pricePerUnitArea = prices[categorySelect.value][materialSelect.value][caliberSelect.value];
       const area = widthInput.value * heightInput.value;
-      const quantity = quantityInput.value; // Get the quantity
-      const cost = pricePerUnitArea * area * quantity; // Calculate cost considering quantity
+      const quantity = quantityInput.value;
+      const cost = pricePerUnitArea * area * quantity;
       
       costSpan.textContent = `$${cost}`;
       
@@ -248,6 +250,7 @@ addButton.addEventListener("click", () => {
   }
   
   
+  
   function updateTotal() {
     let totalCost = 0;
     
@@ -255,7 +258,7 @@ addButton.addEventListener("click", () => {
       if (productDiv.querySelector("span").textContent) {
         const cost = parseFloat(productDiv.querySelector("span").textContent.slice(1));
         const quantity = parseInt(productDiv.querySelector("input[type='number']").value);
-        totalCost += cost * quantity; // Update total cost considering quantity
+        totalCost += cost; // * quantity; // Update total cost considering quantity
       }
     }
     
