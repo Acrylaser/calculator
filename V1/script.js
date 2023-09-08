@@ -188,6 +188,11 @@ addButton.addEventListener("click", () => {
   
   const caliberSelect = document.createElement("select");
   caliberSelect.innerHTML = `<option disabled selected>Seleccione</option>`;
+
+  const quantityInput = document.createElement("input");
+  quantityInput.type = "number";
+  quantityInput.value = 1; // Set default quantity value to 1
+
   
   const widthInput = document.createElement("input");
   widthInput.type = "number";
@@ -226,36 +231,42 @@ addButton.addEventListener("click", () => {
   heightInput.addEventListener("input", updateCost);
   
   function updateCost() {
-      if (categorySelect.value && materialSelect.value && caliberSelect.value && widthInput.value && heightInput.value) {
-          const pricePerUnitArea = prices[categorySelect.value][materialSelect.value][caliberSelect.value];
-          const area = widthInput.value * heightInput.value;
-          const cost = pricePerUnitArea * area;
-          
-          costSpan.textContent = `$${cost}`;
-          
-          updateTotal();
-      } else {
-          costSpan.textContent = "";
-          
-          updateTotal();
-      }
+    if (categorySelect.value && materialSelect.value && caliberSelect.value && widthInput.value && heightInput.value && quantityInput.value) {
+      const pricePerUnitArea = prices[categorySelect.value][materialSelect.value][caliberSelect.value];
+      const area = widthInput.value * heightInput.value;
+      const quantity = quantityInput.value; // Get the quantity
+      const cost = pricePerUnitArea * area * quantity; // Calculate cost considering quantity
+      
+      costSpan.textContent = `$${cost}`;
+      
+      updateTotal();
+    } else {
+      costSpan.textContent = "";
+      
+      updateTotal();
+    }
   }
   
+  
   function updateTotal() {
-      let totalCost = 0;
-      
-      for (const costSpan of productsDiv.querySelectorAll(".product span")) {
-          if (costSpan.textContent) {
-              totalCost += parseFloat(costSpan.textContent.slice(1));
-          }
+    let totalCost = 0;
+    
+    for (const productDiv of productsDiv.querySelectorAll(".product")) {
+      if (productDiv.querySelector("span").textContent) {
+        const cost = parseFloat(productDiv.querySelector("span").textContent.slice(1));
+        const quantity = parseInt(productDiv.querySelector("input[type='number']").value);
+        totalCost += cost * quantity; // Update total cost considering quantity
       }
-      
-      totalSpan.textContent = totalCost;
+    }
+    
+    totalSpan.textContent = `$${totalCost}`;
   }
+  
   
   productDiv.appendChild(categorySelect);
   productDiv.appendChild(materialSelect);
   productDiv.appendChild(caliberSelect);
+  productDiv.appendChild(quantityInput); // Add the quantity input field
   productDiv.appendChild(widthInput);
   productDiv.appendChild(heightInput);
   productDiv.appendChild(costSpan);
