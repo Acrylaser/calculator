@@ -44,10 +44,10 @@ Herrajes,Bisagra acrílica,Grande,3000.0
 Herrajes,Bisagra acrílica,Mediana,4500.0
 Herrajes,Bisagra acrílica,Pequeña,6000.0
 Herrajes,Dilatador,D2xA2,6000.0
-Letras cantoneradas,Color_LC, Con luz_C, 4500.0
-Letras cantoneradas,Color_LC, Sin luz_C, 4500.0
-Letras cantoneradas,Brush (Silver), Con luz_B, 4500.0
-Letras cantoneradas,Brush (Silver), Sin luz_B, 4500.0
+Letras cantoneradas,Color_LC,Con luz_C, 4500.0
+Letras cantoneradas,Color_LC,Sin luz_C, 4500.0
+Letras cantoneradas,Brush (Silver)_LC,Con luz_B, 4500.0
+Letras cantoneradas,Brush (Silver)_LC,Sin luz_B, 4500.0
 Corte/Grabado,Tiempo,Tiempo (minutos),1000.0
 Corte/Grabado,Grabado,Tiempo (minutos),1000.0
 Corte/Grabado,Grabado,Grueso (0.1mm),60.5
