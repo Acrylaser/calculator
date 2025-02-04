@@ -1,0 +1,57 @@
+Category,Material,Calliper,Price
+Acrílico a medida,Cristal u Opal (A),2mm,16.0
+Acrílico a medida,Cristal u Opal (A),3mm,20.0
+Acrílico a medida,Cristal u Opal (A),4mm,25.0
+Acrílico a medida,Cristal u Opal (A),5mm,32.0
+Acrílico a medida,Cristal u Opal (A),8mm,46.0
+Acrílico a medida,Cristal u Opal (A),10mm,57.0
+Acrílico a medida,Colores (A),2mm,18.0
+Acrílico a medida,Colores (A),3mm,22.0
+Acrílico a medida,Colores (A),4mm,27.0
+Acrílico a medida,Colores (A),5mm,35.0
+Acrílico a medida,Espejo (A),3mm,28.0
+Acrílico a medida,Brush (A),3mm,34.0
+MDF a medida,MDF 2.5mm/2.7mm,MDF 2.5mm/2.7mm,2.0
+MDF a medida,MDF 5.5mm,MDF 5.5mm,5.0
+MDF a medida,MDF 9mm,MDF 9mm,9.0
+MDF a medida,MDF 12mm,MDF 12mm,12.0
+Vinilo a medida,Regular,Regular,2.0
+Vinilo a medida,Brush,Brush,4.0
+Vinilo a medida,Fotoluminiscente 5h,Fotoluminiscente 5h,10.0
+Vinilo a medida,Fotoluminiscente 10h,Fotoluminiscente 10h,20.0
+Vinilo a medida,Transfer,Transfer,1.5
+Impresión,Vinilo laminado,Vinilo laminado,6.0
+Impresión,Vinilo laminado en espejo,Vinilo laminado en espejo,6.5
+Impresión,Banner,-,8.0
+Poliestireno a medida,Blanco u Opal (P),40(1mm),3.5
+Poliestireno a medida,Blanco u Opal (P),60(1.5mm),5.0
+Poliestireno a medida,Blanco u Opal (P),80(2mm),6.5
+Poliestireno a medida,Blanco u Opal (P),100(2.5mm),8.0
+Poliestireno a medida,Colores (P),40(1mm),3.5
+Poliestireno a medida,Colores (P),60(1.5mm),5.0
+Poliestireno a medida,Colores (P),80(2mm),6.5
+Poliestireno a medida,Colores (P),100(2.5mm),8.0
+Eléctricos,Neón Flex,Metro instalado,30000.0
+Eléctricos,Neón Flex,Metro suelto,15000.0
+Eléctricos,Fuente,12V-1A,10000.0
+Eléctricos,Fuente,12V-2A,18000.0
+Eléctricos,Fuente,12V-3A,25000.0
+Eléctricos,Fuente,12V-5A,40000.0
+Eléctricos,Fuente,12V-10A,70000.0
+Herrajes,Cerradura,Grande,6000.0
+Herrajes,Cerradura,Pequeña,4000.0
+Herrajes,Bisagra acrílica,Grande,3000.0
+Herrajes,Bisagra acrílica,Mediana,4500.0
+Herrajes,Bisagra acrílica,Pequeña,6000.0
+Herrajes,Dilatador,D2xA2,6000.0
+Letras cantoneradas,Color_LC,Con luz_C, 4500.0
+Letras cantoneradas,Color_LC,Sin luz_C, 4500.0
+Letras cantoneradas,Brush (Silver)_LC,Con luz_B, 4500.0
+Letras cantoneradas,Brush (Silver)_LC,Sin luz_B, 4500.0
+Corte/Grabado,Tiempo,Tiempo (minutos),1000.0
+Corte/Grabado,Grabado,Tiempo (minutos),1000.0
+Corte/Grabado,Grabado,Grueso (0.1mm),60.5
+Corte/Grabado,Grabado,Medio (0.075mm),80.5
+Corte/Grabado,Grabado,Fino (0.05mm),12.2
+Mano de obra,-,-,1.0
+Otros,-,-,1.0

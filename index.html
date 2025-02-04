@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Calculadora de Cotizaciones</h2>
+    <h3> Uso interno de Acrylaser Exclusivamente</h3>
+    <div id="calculator">
+      <!-- Add the following code inside the <div id="calculator"> -->
+      <div>
+        <label for="title">Título:</label>
+        <input type="text" id="title" />
+      </div>
+      <div>
+        <label for="observations">Observaciones:</label>
+        <textarea id="observations" rows="4"></textarea>
+      </div>
+
+      <div id="products"></div>
+      <button id="add">Agregar Elemento</button>
+      <button id="save">Guardar Cotización</button>
+      <input type="file" id="load" accept=".json" />
+      <h3>Costo Total: $<span id="total">0</span></h3>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
