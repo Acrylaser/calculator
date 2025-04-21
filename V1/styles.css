@@ -32,13 +32,13 @@ h2, h3 {
 #title {
   display: block;
   width: 100%;
-  padding: 6px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-size: 13px;
-  box-sizing: border-box;
   resize: vertical;
+  box-sizing: border-box;
 }
 
 .product {
@@ -46,7 +46,7 @@ h2, h3 {
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 8px;
-  padding: 8px;
+  padding: 6px;
   border: 1px solid #ddd;
   border-radius: 6px;
   background-color: #f9f9f9;
@@ -56,22 +56,22 @@ h2, h3 {
 .product select {
   flex: 1 1 100px;
   min-width: 90px;
-  padding: 5px;
+  padding: 4px 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 12px;
+  height: 28px;
   box-sizing: border-box;
 }
 
 .product span {
   font-weight: bold;
-  padding: 4px;
   font-size: 12px;
   align-self: center;
 }
 
 .product button {
-  padding: 5px 8px;
+  padding: 4px 6px;
   border: none;
   border-radius: 4px;
   background-color: #dc3545;
@@ -87,13 +87,13 @@ h2, h3 {
 button#add, #save {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   margin-top: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -116,36 +116,36 @@ input[type="file"] {
   text-align: center;
 }
 
-/* Compacta aún más en móviles */
+/* Modo móvil ultracompacto */
 @media (max-width: 480px) {
   .product {
     flex-direction: column;
     gap: 4px;
-    padding: 6px;
+    padding: 4px;
   }
 
   .product input,
   .product select {
     min-width: 100%;
-    padding: 4px;
-    font-size: 12px;
+    padding: 3px 5px;
+    font-size: 11px;
+    height: 26px;
   }
 
   .product button {
     width: 100%;
-    font-size: 12px;
-    padding: 5px;
+    font-size: 11px;
+    padding: 4px;
   }
 
   button#add {
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 14px;
+    padding: 8px;
+    font-size: 13px;
   }
 
   #observations,
   #title {
-    font-size: 13px;
-    padding: 6px;
+    font-size: 12px;
+    padding: 4px;
   }
 }
