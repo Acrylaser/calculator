@@ -1,85 +1,136 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  #calculator {
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  #products {
-    margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#calculator {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#products {
+  margin-bottom: 20px;
+}
+
+#observations,
+#title {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.product input,
+.product select {
+  flex: 1 1 120px;
+  min-width: 100px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.product span {
+  font-weight: bold;
+  padding: 5px;
+  min-width: 80px;
+  align-self: center;
+}
+
+.product button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.product button:nth-child(n):not(:last-child) {
+  background-color: #6c757d;
+}
+
+button#add, #save {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#add:hover,
+#save:hover {
+  background-color: #0056b3;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .product {
+    flex-direction: column;
   }
 
-  #observations {
-    display: block;
+  .product input,
+  .product select {
+    min-width: 100%;
+  }
+
+  .product button {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    resize: vertical; /* Allow vertical resizing of textarea */
   }
-  
-  .product {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .product select,
-  .product input {
-    flex: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .product span {
-    font-weight: bold;
-    flex: 1;
-  }
-  
+
   button#add {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
   }
-  
-  button#add:hover {
-    background-color: #0056b3;
-  }
-  
-  h3 {
-    text-align: center;
-    margin: 0;
-  }
-  
-  @media (max-width: 480px) {
-    .product {
-      flex-direction: column;
-    }
-  
-    button#add {
-      margin-top: 10px;
-    }
-  }
-  
+}
