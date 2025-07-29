@@ -26,21 +26,21 @@ const categories = {
 };
 
 const materials = {
-  "Cristal (Recuperado)": ['2mm', '3mm', '4mm', '5mm', '8mm', '10mm'],
-  "Opal (Recuperado)": ['2mm', '3mm', '4mm', '5mm', '8mm', '10mm'],
-  "Color (Recuperado)": ['2mm', '3mm', '4mm', '5mm', '8mm', '10mm'],
-  "Cristal (Original)": ['2mm', '3mm', '4mm', '5mm', '6mm', '8mm', '10mm', '15mm'],
-  "Opal (Original)": ['2mm', '3mm', '5mm', '10mm', '4mm'],
-  "Color (Original)": ['2mm', '3mm', '5mm', '10mm'],
-  "Color Traslúcido (Original)": ['3mm'],
-  "Espejo (Original)": ['3mm'],
-  "Espejo Traslúcido (Original)": ['3mm'],
-  "Metalizado (Original)": ['3mm'],
-  "Textura Madera (Original)": ['3mm'],
-  "Blanco Sellado (Original)": ['3mm', '5mm'],
-  "Cristal Mate (Original)": ['3mm', '2mm'],
-  "Negro Mate (Original)": ['3mm'],
-  "Lila (Original)": ['3mm'],
+  "Cristal (Recuperado)": ['2', '3', '4', '5', '8', '10'],
+  "Opal (Recuperado)": ['2', '3', '4', '5', '8', '10'],
+  "Color (Recuperado)": ['2', '3', '4', '5', '8', '10'],
+  "Cristal (Original)": ['2', '3', '4', '5', '6', '8', '10', '15'],
+  "Opal (Original)": ['2', '3', '5', '10', '4'],
+  "Color (Original)": ['2', '3', '5', '10'],
+  "Color Traslúcido (Original)": ['3'],
+  "Espejo (Original)": ['3'],
+  "Espejo Traslúcido (Original)": ['3'],
+  "Metalizado (Original)": ['3'],
+  "Textura Madera (Original)": ['3'],
+  "Blanco Sellado (Original)": ['3', '5'],
+  "Cristal Mate (Original)": ['3', '2'],
+  "Negro Mate (Original)": ['3'],
+  "Lila (Original)": ['3'],
   "MDF 2.5mm/2.7mm": ['MDF 2.5mm/2.7mm'],
   "MDF 5.5mm": ['MDF 5.5mm'],
   "MDF 9mm": ['MDF 9mm'],
@@ -77,528 +77,528 @@ const materials = {
 const prices = {
   "Acrílico a medida": {
     "Cristal (Recuperado)": {
-      "2mm": 9.8,
-      "3mm": 12.2,
-      "4mm": 16.9,
-      "5mm": 19.6,
-      "8mm": 31.2,
-      "10mm": 33.8,
+      "2": Price,
+      "3": 9.8,
+      "4": 12.2,
+      "5": 16.9,
+      "8": 19.9,
+      "10": 31.2,
     },
     "Opal (Recuperado)": {
-      "2mm": 10.1,
-      "3mm": 12.5,
-      "4mm": 17.2,
-      "5mm": 20.2,
-      "8mm": 31.8,
-      "10mm": 34.4,
+      "2": 34.1,
+      "3": 10.4,
+      "4": 12.8,
+      "5": 17.2,
+      "8": 20.5,
+      "10": 34.4,
     },
     "Color (Recuperado)": {
-      "2mm": 11.6,
-      "3mm": 13.4,
-      "4mm": 18.1,
-      "5mm": 21.1,
-      "8mm": 32.9,
-      "10mm": 36.2,
+      "2": 37.7,
+      "3": 11.6,
+      "4": 13.4,
+      "5": 18.1,
+      "8": 21.4,
+      "10": 35,
     },
     "Cristal (Original)": {
-      "2mm": 14.3,
-      "3mm": 18.9,
-      "4mm": 25.7,
-      "5mm": 32.7,
-      "6mm": 35.5,
-      "8mm": 52.1,
-      "10mm": 63.0,
-      "15mm": 104.4,
+      "2": 38.3,
+      "3": 14.3,
+      "4": 18.9,
+      "5": 25.7,
+      "6": 32.7,
+      "8": 37,
+      "10": 54.3,
+      "15": 63,
     },
     "Opal (Original)": {
-      "2mm": 16.8,
-      "3mm": 20.1,
-      "5mm": 32.8,
-      "10mm": 61.6,
+      "2": 108.8,
+      "3": 16.8,
+      "5": 20.1,
+      "10": 34.2,
     },
     "Color (Original)": {
-      "2mm": 13.5,
-      "3mm": 20.1,
-      "5mm": 33.2,
-      "10mm": 60.8,
+      "2": 64.3,
+      "3": 14.1,
+      "5": 20.1,
+      "10": 34.6,
     },
     "Color Traslúcido (Original)": {
-      "3mm": 22.2,
+      "3": 63.4,
     },
     "Espejo (Original)": {
-      "3mm": 28.4,
+      "3": 23.2,
     },
     "Espejo Traslúcido (Original)": {
-      "3mm": 28.6,
+      "3": 28.4,
     },
     "Metalizado (Original)": {
-      "3mm": 30.8,
+      "3": 29.8,
     },
     "Textura Madera (Original)": {
-      "3mm": 30.2,
+      "3": 30.8,
     },
     "Blanco Sellado (Original)": {
-      "3mm": 21.9,
-      "5mm": 31.9,
+      "3": 31.5,
+      "5": 22.8,
     },
     "Cristal Mate (Original)": {
-      "3mm": 21.9,
+      "3": 33.3,
     },
     "Negro Mate (Original)": {
-      "3mm": 21.9,
+      "3": 22.8,
     },
   },
   "Ac (240x120)": {
     "Cristal (Recuperado)": {
-      "2mm": 208000.0,
-      "3mm": 249600.0,
-      "4mm": 338000.0,
-      "5mm": 387400.0,
-      "8mm": 572000.0,
-      "10mm": 676000.0,
+      "2": 208000,
+      "3": 253500,
+      "4": 345800,
+      "5": 396500,
+      "8": 592800,
+      "10": 705900,
     },
     "Opal (Recuperado)": {
-      "2mm": 221000.0,
-      "3mm": 260000.0,
-      "4mm": 351000.0,
-      "5mm": 396500.0,
-      "8mm": 585000.0,
-      "10mm": 682500.0,
+      "2": 221000,
+      "3": 260000,
+      "4": 357500,
+      "5": 409500,
+      "8": 609700,
+      "10": 722800,
     },
     "Color (Recuperado)": {
-      "2mm": 240500.0,
-      "3mm": 286000.0,
-      "4mm": 364000.0,
-      "5mm": 410800.0,
-      "8mm": 598000.0,
-      "10mm": 734500.0,
+      "2": 240500,
+      "3": 286000,
+      "4": 371800,
+      "5": 422500,
+      "8": 627900,
+      "10": 739700,
     },
     "Cristal (Original)": {
-      "2mm": 280000.0,
-      "3mm": 379848.0,
-      "4mm": 554746.0,
-      "5mm": 648200.0,
-      "10mm": 1349179.0,
+      "2": 278600,
+      "3": 379848,
+      "4": 578400,
+      "5": 648200,
+      "10": 1406706,
     },
     "Opal (Original)": {
-      "2mm": 360284.0,
-      "3mm": 399000.0,
-      "4mm": 595448.0,
-      "5mm": 638412.0,
+      "2": 375646,
+      "3": 399000,
+      "4": 620837,
+      "5": 638412,
     },
     "Color (Original)": {
-      "3mm": 399000.0,
-      "5mm": 638412.0,
+      "3": 399000,
+      "5": 638412,
     },
     "Espejo (Original)": {
-      "3mm": 552613.0,
+      "3": 552613,
     },
     "Cristal Mate (Original)": {
-      "3mm": 419832.0,
+      "3": 419832,
     },
     "Negro Mate (Original)": {
-      "3mm": 419832.0,
+      "3": 419832,
     },
   },
   "Ac (180x120)": {
     "Cristal (Recuperado)": {
-      "2mm": 147714.0,
-      "3mm": 182949.0,
-      "4mm": 253418.0,
-      "5mm": 298138.0,
-      "8mm": 472956.0,
-      "10mm": 514966.0,
+      "2": 147714,
+      "3": 182949,
+      "4": 253418,
+      "5": 304914,
+      "8": 472956,
+      "10": 514966,
     },
     "Opal (Recuperado)": {
-      "2mm": 153135.0,
-      "3mm": 189725.0,
-      "4mm": 261549.0,
-      "5mm": 304914.0,
-      "8mm": 481087.0,
-      "10mm": 521742.0,
+      "2": 155845,
+      "3": 195145,
+      "4": 261549,
+      "5": 311690,
+      "8": 524452,
+      "10": 571883,
     },
     "Color (Recuperado)": {
-      "2mm": 173463.0,
-      "3mm": 203276.0,
-      "4mm": 273745.0,
-      "5mm": 319821.0,
-      "8mm": 498704.0,
-      "10mm": 548845.0,
+      "2": 173463,
+      "3": 203276,
+      "4": 273745,
+      "5": 322532,
+      "8": 532583,
+      "10": 581369,
     },
     "Cristal (Original)": {
-      "2mm": 233566.0,
-      "3mm": 305545.0,
-      "4mm": 401028.0,
-      "5mm": 512709.0,
-      "6mm": 580185.0,
-      "8mm": 822642.0,
-      "10mm": 1028276.0,
-      "15mm": 1542322.0,
+      "2": 233566,
+      "3": 305545,
+      "4": 401028,
+      "5": 512709,
+      "6": 580185,
+      "8": 822642,
+      "10": 1019463,
+      "15": 1542322,
     },
     "Opal (Original)": {
-      "2mm": 262945.0,
-      "3mm": 315828.0,
-      "4mm": 474517.0,
-      "5mm": 512709.0,
-      "10mm": 988533.0,
+      "2": 262945,
+      "3": 315828,
+      "4": 491451,
+      "5": 512709,
+      "10": 988533,
     },
     "Color (Original)": {
-      "2mm": 211517.0,
-      "3mm": 315828.0,
-      "5mm": 512709.0,
-      "10mm": 988533.0,
+      "2": 211517,
+      "3": 315828,
+      "5": 512709,
+      "10": 988533,
     },
     "Color Traslúcido (Original)": {
-      "3mm": 331959.0,
+      "3": 331959,
     },
     "Espejo (Original)": {
-      "3mm": 437752.0,
+      "3": 437752,
     },
     "Espejo Traslúcido (Original)": {
-      "3mm": 418663.0,
+      "3": 418663,
     },
     "Metalizado (Original)": {
-      "3mm": 528828.0,
+      "3": 528828,
     },
     "Textura Madera (Original)": {
-      "3mm": 470231.0,
+      "3": 470231,
     },
     "Blanco Sellado (Original)": {
-      "3mm": 323393.0,
-      "5mm": 499599.0,
+      "3": 323393,
+      "5": 499599,
     },
     "Cristal Mate (Original)": {
-      "3mm": 323393.0,
+      "3": 323393,
     },
     "Negro Mate (Original)": {
-      "3mm": 323393.0,
+      "3": 323393,
     },
   },
   "Ac (120x120)": {
     "Cristal (Recuperado)": {
-      "2mm": 112828.0,
-      "3mm": 135394.0,
-      "4mm": 183345.0,
-      "5mm": 210142.0,
-      "8mm": 310276.0,
-      "10mm": 366690.0,
+      "2": 112828,
+      "3": 137509,
+      "4": 187576,
+      "5": 215078,
+      "8": 321559,
+      "10": 382909,
     },
     "Opal (Recuperado)": {
-      "2mm": 119880.0,
-      "3mm": 141035.0,
-      "4mm": 190397.0,
-      "5mm": 215078.0,
-      "8mm": 317328.0,
-      "10mm": 370216.0,
+      "2": 119880,
+      "3": 141035,
+      "4": 193923,
+      "5": 222130,
+      "8": 330726,
+      "10": 392076,
     },
     "Color (Recuperado)": {
-      "2mm": 130457.0,
-      "3mm": 155138.0,
-      "4mm": 197449.0,
-      "5mm": 222835.0,
-      "8mm": 324380.0,
-      "10mm": 398423.0,
+      "2": 130457,
+      "3": 155138,
+      "4": 201680,
+      "5": 229182,
+      "8": 340599,
+      "10": 401244,
     },
     "Cristal (Original)": {
-      "2mm": 153794.0,
-      "3mm": 208636.0,
-      "4mm": 304701.0,
-      "5mm": 356032.0,
-      "10mm": 741052.0,
+      "2": 153025,
+      "3": 208636,
+      "4": 317693,
+      "5": 356032,
+      "10": 772649,
     },
     "Opal (Original)": {
-      "2mm": 197890.0,
-      "3mm": 219156.0,
-      "4mm": 327057.0,
-      "5mm": 350655.0,
+      "2": 206328,
+      "3": 219156,
+      "4": 341002,
+      "5": 350655,
     },
     "Color (Original)": {
-      "3mm": 219156.0,
-      "5mm": 350655.0,
+      "3": 219156,
+      "5": 350655,
     },
     "Espejo (Original)": {
-      "3mm": 303529.0,
+      "3": 303529,
     },
     "Cristal Mate (Original)": {
-      "3mm": 230598.0,
-      "2mm": 173864.0,
+      "3": 230598,
+      "2": 173864,
     },
     "Negro Mate (Original)": {
-      "3mm": 230598.0,
+      "3": 230598,
     },
     "Lila (Original)": {
-      "3mm": 253658.0,
+      "3": 253658,
     },
   },
   "Ac (120x90)": {
     "Cristal (Recuperado)": {
-      "2mm": 78368.0,
-      "3mm": 97061.0,
-      "4mm": 134447.0,
-      "5mm": 158173.0,
-      "8mm": 250919.0,
-      "10mm": 273207.0,
+      "2": 78368,
+      "3": 97061,
+      "4": 134447,
+      "5": 161768,
+      "8": 250919,
+      "10": 273207,
     },
     "Opal (Recuperado)": {
-      "2mm": 81244.0,
-      "3mm": 100656.0,
-      "4mm": 138761.0,
-      "5mm": 161768.0,
-      "8mm": 255233.0,
-      "10mm": 276802.0,
+      "2": 82682,
+      "3": 103532,
+      "4": 138761,
+      "5": 165363,
+      "8": 278240,
+      "10": 303404,
     },
     "Color (Recuperado)": {
-      "2mm": 92028.0,
-      "3mm": 107845.0,
-      "4mm": 145232.0,
-      "5mm": 169676.0,
-      "8mm": 264580.0,
-      "10mm": 291182.0,
+      "2": 92028,
+      "3": 107845,
+      "4": 145232,
+      "5": 171114,
+      "8": 282554,
+      "10": 308437,
     },
     "Cristal (Original)": {
-      "2mm": 125007.0,
-      "3mm": 163532.0,
-      "4mm": 214635.0,
-      "5mm": 274408.0,
-      "6mm": 310522.0,
-      "8mm": 440287.0,
-      "10mm": 550345.0,
-      "15mm": 825468.0,
+      "2": 125007,
+      "3": 163532,
+      "4": 214635,
+      "5": 274408,
+      "6": 310522,
+      "8": 440287,
+      "10": 545628,
+      "15": 825468,
     },
     "Opal (Original)": {
-      "2mm": 140732.0,
-      "3mm": 169035.0,
-      "4mm": 253967.0,
-      "5mm": 274408.0,
-      "10mm": 529074.0,
+      "2": 140732,
+      "3": 169035,
+      "4": 263030,
+      "5": 274408,
+      "10": 529074,
     },
     "Color (Original)": {
-      "2mm": 113206.0,
-      "3mm": 169035.0,
-      "5mm": 274408.0,
-      "10mm": 529074.0,
+      "2": 113206,
+      "3": 169035,
+      "5": 274408,
+      "10": 529074,
     },
     "Color Traslúcido (Original)": {
-      "3mm": 177668.0,
+      "3": 177668,
     },
     "Espejo (Original)": {
-      "3mm": 234290.0,
+      "3": 234290,
     },
     "Espejo Traslúcido (Original)": {
-      "3mm": 224073.0,
+      "3": 224073,
     },
     "Metalizado (Original)": {
-      "3mm": 283035.0,
+      "3": 283035,
     },
     "Textura Madera (Original)": {
-      "3mm": 251673.0,
+      "3": 251673,
     },
     "Blanco Sellado (Original)": {
-      "3mm": 173084.0,
-      "5mm": 267391.0,
+      "3": 173084,
+      "5": 267391,
     },
     "Cristal Mate (Original)": {
-      "3mm": 173084.0,
+      "3": 173084,
     },
     "Negro Mate (Original)": {
-      "3mm": 173084.0,
+      "3": 173084,
     },
   },
   "Ac (120x60)": {
     "Cristal (Recuperado)": {
-      "2mm": 58621.0,
-      "3mm": 70345.0,
-      "4mm": 95259.0,
-      "5mm": 109182.0,
-      "8mm": 161207.0,
-      "10mm": 190518.0,
+      "2": 58621,
+      "3": 71444,
+      "4": 97457,
+      "5": 111746,
+      "8": 167069,
+      "10": 198944,
     },
     "Opal (Recuperado)": {
-      "2mm": 62285.0,
-      "3mm": 73276.0,
-      "4mm": 98923.0,
-      "5mm": 111746.0,
-      "8mm": 164871.0,
-      "10mm": 192350.0,
+      "2": 62285,
+      "3": 73276,
+      "4": 100755,
+      "5": 115410,
+      "8": 171832,
+      "10": 203707,
     },
     "Color (Recuperado)": {
-      "2mm": 67781.0,
-      "3mm": 80604.0,
-      "4mm": 102587.0,
-      "5mm": 115776.0,
-      "8mm": 168535.0,
-      "10mm": 207005.0,
+      "2": 67781,
+      "3": 80604,
+      "4": 104785,
+      "5": 119074,
+      "8": 176962,
+      "10": 208470,
     },
     "Cristal (Original)": {
-      "2mm": 80345.0,
-      "3mm": 108996.0,
-      "4mm": 159182.0,
-      "5mm": 185999.0,
-      "10mm": 387141.0,
+      "2": 79944,
+      "3": 108996,
+      "4": 165970,
+      "5": 185999,
+      "10": 403649,
     },
     "Opal (Original)": {
-      "2mm": 103382.0,
-      "3mm": 114492.0,
-      "5mm": 183190.0,
+      "2": 107790,
+      "3": 114492,
+      "5": 183190,
     },
     "Color (Original)": {
-      "3mm": 114492.0,
-      "5mm": 183190.0,
+      "3": 114492,
+      "5": 183190,
     },
     "Espejo (Original)": {
-      "3mm": 158570.0,
+      "3": 158570,
     },
     "Cristal Mate (Original)": {
-      "3mm": 120470.0,
+      "3": 120470,
     },
     "Negro Mate (Original)": {
-      "3mm": 120470.0,
+      "3": 120470,
     },
   },
   "Ac Cuarto (90x60 / 120x45)": {
     "Cristal (Recuperado)": {
-      "2mm": 40312.0,
-      "3mm": 49927.0,
-      "4mm": 69158.0,
-      "5mm": 81363.0,
-      "8mm": 129070.0,
-      "10mm": 140535.0,
+      "2": 40312,
+      "3": 49927,
+      "4": 69158,
+      "5": 83212,
+      "8": 129070,
+      "10": 140535,
     },
     "Opal (Recuperado)": {
-      "2mm": 41791.0,
-      "3mm": 51776.0,
-      "4mm": 71377.0,
-      "5mm": 83212.0,
-      "8mm": 131289.0,
-      "10mm": 142384.0,
+      "2": 42531,
+      "3": 53256,
+      "4": 71377,
+      "5": 85061,
+      "8": 143124,
+      "10": 156068,
     },
     "Color (Recuperado)": {
-      "2mm": 47338.0,
-      "3mm": 55475.0,
-      "4mm": 74706.0,
-      "5mm": 87280.0,
-      "8mm": 136097.0,
-      "10mm": 149781.0,
+      "2": 47338,
+      "3": 55475,
+      "4": 74706,
+      "5": 88019,
+      "8": 145343,
+      "10": 158657,
     },
     "Cristal (Original)": {
-      "2mm": 64560.0,
-      "3mm": 84456.0,
-      "4mm": 110848.0,
-      "5mm": 141717.0,
-      "6mm": 160368.0,
-      "8mm": 227385.0,
-      "10mm": 284225.0,
-      "15mm": 426311.0,
+      "2": 64560,
+      "3": 84456,
+      "4": 110848,
+      "5": 141717,
+      "6": 160368,
+      "8": 227385,
+      "10": 281788,
+      "15": 426311,
     },
     "Opal (Original)": {
-      "2mm": 72681.0,
-      "3mm": 87298.0,
-      "5mm": 141717.0,
-      "10mm": 273239.0,
+      "2": 72681,
+      "3": 87298,
+      "5": 141717,
+      "10": 273239,
     },
     "Color (Original)": {
-      "2mm": 58465.0,
-      "3mm": 87298.0,
-      "5mm": 141717.0,
-      "10mm": 273239.0,
+      "2": 58465,
+      "3": 87298,
+      "5": 141717,
+      "10": 273239,
     },
     "Color Traslúcido (Original)": {
-      "3mm": 91757.0,
+      "3": 91757,
     },
     "Espejo (Original)": {
-      "3mm": 120999.0,
+      "3": 120999,
     },
     "Espejo Traslúcido (Original)": {
-      "3mm": 115722.0,
+      "3": 115722,
     },
     "Metalizado (Original)": {
-      "3mm": 146173.0,
+      "3": 146173,
     },
     "Textura Madera (Original)": {
-      "3mm": 129976.0,
+      "3": 129976,
     },
     "Blanco Sellado (Original)": {
-      "3mm": 89389.0,
-      "5mm": 138094.0,
+      "3": 89389,
+      "5": 138094,
     },
     "Cristal Mate (Original)": {
-      "3mm": 89389.0,
+      "3": 89389,
     },
     "Negro Mate (Original)": {
-      "3mm": 89389.0,
+      "3": 89389,
     },
   },
   "Ac Octavo (60x45)": {
     "Cristal (Recuperado)": {
-      "2mm": 20438.0,
-      "3mm": 25313.0,
-      "4mm": 35063.0,
-      "5mm": 41250.0,
-      "8mm": 65438.0,
-      "10mm": 71250.0,
+      "2": 20438,
+      "3": 25313,
+      "4": 35063,
+      "5": 42188,
+      "8": 65438,
+      "10": 71250,
     },
     "Opal (Recuperado)": {
-      "2mm": 21188.0,
-      "3mm": 26250.0,
-      "4mm": 36188.0,
-      "5mm": 42188.0,
-      "8mm": 66563.0,
-      "10mm": 72188.0,
+      "2": 21563,
+      "3": 27000,
+      "4": 36188,
+      "5": 43125,
+      "8": 72563,
+      "10": 79125,
     },
     "Color (Recuperado)": {
-      "2mm": 24000.0,
-      "3mm": 28125.0,
-      "4mm": 37875.0,
-      "5mm": 44250.0,
-      "8mm": 69000.0,
-      "10mm": 83532.0,
+      "2": 24000,
+      "3": 28125,
+      "4": 37875,
+      "5": 44625,
+      "8": 73688,
+      "10": 88482,
     },
     "Cristal (Original)": {
-      "2mm": 32794.0,
-      "3mm": 42900.0,
-      "4mm": 56307.0,
-      "5mm": 71987.0,
-      "6mm": 81461.0,
-      "8mm": 115503.0,
-      "10mm": 144375.0,
-      "15mm": 216550.0,
+      "2": 32794,
+      "3": 42900,
+      "4": 56307,
+      "5": 71987,
+      "6": 81461,
+      "8": 115503,
+      "10": 143138,
+      "15": 216550,
     },
     "Opal (Original)": {
-      "2mm": 36919.0,
-      "3mm": 44344.0,
-      "5mm": 71987.0,
-      "10mm": 138795.0,
+      "2": 36919,
+      "3": 44344,
+      "5": 71987,
+      "10": 138795,
     },
     "Color (Original)": {
-      "2mm": 29698.0,
-      "3mm": 44344.0,
-      "5mm": 71987.0,
-      "10mm": 138795.0,
+      "2": 29698,
+      "3": 44344,
+      "5": 71987,
+      "10": 138795,
     },
     "Color Traslúcido (Original)": {
-      "3mm": 46609.0,
+      "3": 46609,
     },
     "Espejo (Original)": {
-      "3mm": 61463.0,
+      "3": 61463,
     },
     "Espejo Traslúcido (Original)": {
-      "3mm": 58783.0,
+      "3": 58783,
     },
     "Metalizado (Original)": {
-      "3mm": 74250.0,
+      "3": 74250,
     },
     "Textura Madera (Original)": {
-      "3mm": 66023.0,
+      "3": 66023,
     },
     "Blanco Sellado (Original)": {
-      "3mm": 45406.0,
-      "5mm": 70147.0,
+      "3": 45406,
+      "5": 70147,
     },
     "Cristal Mate (Original)": {
-      "3mm": 45406.0,
+      "3": 45406,
     },
     "Negro Mate (Original)": {
-      "3mm": 45406.0,
+      "3": 45406,
     },
   },
   "MDF a medida": {
@@ -664,8 +664,8 @@ const prices = {
       "100 (2.5 mm)": 7.3,
     },
     "Blackout": {
-      "20 (0.5 mm)": 2.0,
-      "30 (0.75 mm)": 3.0,
+      "20 (0.5 mm)": 2,
+      "30 (0.75 mm)": 3,
       "40 (1 mm)": 3.9,
       "60 (1.5 mm)": 5.9,
     },
@@ -681,50 +681,50 @@ const prices = {
       "60 (1.5 mm)": 7.8,
       "80 (2 mm)": 10.3,
       "100 (2.5 mm)": 12.5,
-      "120 (3 mm)": 15.0,
+      "120 (3 mm)": 15,
       "180 (4.5 mm)": 22.5,
     },
   },
   "PS (100x200)": {
     "Blanco": {
-      "15 (0.38 mm)": 22400.0,
-      "20 (0.5 mm)": 29900.0,
-      "30 (0.75 mm)": 44800.0,
-      "40 (1 mm)": 59700.0,
-      "60 (1.5 mm)": 89500.0,
-      "80 (2 mm)": 119300.0,
-      "100 (2.5 mm)": 149100.0,
-      "120 (3 mm)": 178900.0,
-      "150 (3.75 mm)": 223700.0,
-      "180 (4.5 mm)": 268400.0,
+      "15 (0.38 mm)": 22400,
+      "20 (0.5 mm)": 29900,
+      "30 (0.75 mm)": 44800,
+      "40 (1 mm)": 59700,
+      "60 (1.5 mm)": 89500,
+      "80 (2 mm)": 119300,
+      "100 (2.5 mm)": 149100,
+      "120 (3 mm)": 178900,
+      "150 (3.75 mm)": 223700,
+      "180 (4.5 mm)": 268400,
     },
     "Ecolam": {
-      "30 (0.75 mm)": 38600.0,
-      "40 (1 mm)": 51500.0,
-      "60 (1.5 mm)": 77200.0,
-      "80 (2 mm)": 102900.0,
-      "100 (2.5 mm)": 128600.0,
+      "30 (0.75 mm)": 38600,
+      "40 (1 mm)": 51500,
+      "60 (1.5 mm)": 77200,
+      "80 (2 mm)": 102900,
+      "100 (2.5 mm)": 128600,
     },
     "Blackout": {
-      "20 (0.5 mm)": 34600.0,
-      "30 (0.75 mm)": 51800.0,
-      "40 (1 mm)": 69100.0,
-      "60 (1.5 mm)": 103600.0,
+      "20 (0.5 mm)": 34600,
+      "30 (0.75 mm)": 51800,
+      "40 (1 mm)": 69100,
+      "60 (1.5 mm)": 103600,
     },
     "Colores": {
-      "40 (1 mm)": 67900.0,
-      "60 (1.5 mm)": 101800.0,
-      "80 (2 mm)": 135800.0,
-      "100 (2.5 mm)": 169700.0,
-      "120 (3 mm)": 203600.0,
+      "40 (1 mm)": 67900,
+      "60 (1.5 mm)": 101800,
+      "80 (2 mm)": 135800,
+      "100 (2.5 mm)": 169700,
+      "120 (3 mm)": 203600,
     },
     "Cristal": {
-      "40 (1 mm)": 91400.0,
-      "60 (1.5 mm)": 137000.0,
-      "80 (2 mm)": 182700.0,
-      "100 (2.5 mm)": 222100.0,
-      "120 (3 mm)": 266500.0,
-      "180 (4.5 mm)": 399700.0,
+      "40 (1 mm)": 91400,
+      "60 (1.5 mm)": 137000,
+      "80 (2 mm)": 182700,
+      "100 (2.5 mm)": 222100,
+      "120 (3 mm)": 266500,
+      "180 (4.5 mm)": 399700,
     },
   },
   "Pet-G a medida": {
@@ -734,7 +734,7 @@ const prices = {
   },
   "Pet-G 100x200": {
     "Cristal": {
-      "40 (1 mm)": 171200.0,
+      "40 (1 mm)": 171200,
     },
   },
   "PP a medida": {
@@ -755,18 +755,18 @@ const prices = {
   },
   "PP 100x200": {
     "Natural (Hielo)": {
-      "20 (0.5 mm)": 26600.0,
-      "30 (0.75 mm)": 39800.0,
-      "40 (1 mm)": 53100.0,
-      "60 (1.5 mm)": 79600.0,
-      "80 (2 mm)": 106100.0,
-      "120 (3 mm)": 160200.0,
-      "160 (4 mm)": 213600.0,
-      "200 (5 mm)": 267000.0,
-      "240 (6 mm)": 320400.0,
+      "20 (0.5 mm)": 26600,
+      "30 (0.75 mm)": 39800,
+      "40 (1 mm)": 53100,
+      "60 (1.5 mm)": 79600,
+      "80 (2 mm)": 106100,
+      "120 (3 mm)": 160200,
+      "160 (4 mm)": 213600,
+      "200 (5 mm)": 267000,
+      "240 (6 mm)": 320400,
     },
     "Color": {
-      "20 (0.5 mm)": 30300.0,
+      "20 (0.5 mm)": 30300,
     },
   },
   "ABS": {
@@ -806,12 +806,12 @@ const prices = {
   },
   "Letras Volumétrica": {
     "Color_LC": {
-      "Con luz_C": 4500.0,
-      "Sin luz_C": 4500.0,
+      "Con luz_C":  4500.0,
+      "Sin luz_C":  4500.0,
     },
     "Brush (Silver)_LC": {
-      "Con luz_B": 4500.0,
-      "Sin luz_B": 4500.0,
+      "Con luz_B":  4500.0,
+      "Sin luz_B":  4500.0,
     },
   },
   "Corte/Grabado": {
@@ -820,22 +820,22 @@ const prices = {
     },
     "Grabado": {
       "Tiempo (minutos)": 1000.0,
-      "0.05": 135.705,
+      "0.05": 135.7050,
       "0.06": 113.1567,
-      "0.07": 97.11,
+      "0.07": 97.1100,
       "0.08": 85.2133,
       "0.09": 75.8067,
       "0.1": 68.1983,
-      "0.11": 62.25,
+      "0.11": 62.2500,
       "0.12": 56.9933,
-      "0.13": 52.705,
-      "0.14": 48.97,
-      "0.15": 45.65,
-      "0.2": 34.445,
+      "0.13": 52.7050,
+      "0.14": 48.9700,
+      "0.15": 45.6500,
+      "0.2": 34.4450,
       "0.25": 27.6667,
       "0.3": 23.1017,
-      "0.35": 19.92,
-      "0.4": 17.43,
+      "0.35": 19.9200,
+      "0.4": 17.4300,
       "0.45": 15.4933,
       "0.5": 13.9717,
     },
@@ -855,193 +855,196 @@ const prices = {
 
 
 
+
+
 const productsDiv = document.querySelector("#products");
 const totalSpan = document.querySelector("#total");
 const addButton = document.querySelector("#add");
 
-function createProductElement(data = {}) {
+addButton.addEventListener("click", () => {
   const productDiv = document.createElement("div");
   productDiv.classList.add("product");
 
-  const descriptionInput = document.createElement("input");
-  descriptionInput.placeholder = "Descripción";
-  descriptionInput.value = data.description || "";
-
   const categorySelect = document.createElement("select");
-  categorySelect.innerHTML = `<option disabled selected>Seleccione categoría</option>`;
+  categorySelect.innerHTML = `<option disabled selected>Seleccione</option>`;
   for (const category in categories) {
-    categorySelect.innerHTML += `<option>${category}</option>`;
+      categorySelect.innerHTML += `<option>${category}</option>`;
   }
-
+  
   const materialSelect = document.createElement("select");
-  materialSelect.innerHTML = `<option disabled selected>Seleccione material</option>`;
-
+  materialSelect.innerHTML = `<option disabled selected>Seleccione</option>`;
+  
   const caliberSelect = document.createElement("select");
-  caliberSelect.innerHTML = `<option disabled selected>Seleccione calibre</option>`;
+  caliberSelect.innerHTML = `<option disabled selected>Seleccione</option>`;
 
   const quantityInput = document.createElement("input");
   quantityInput.type = "number";
-  quantityInput.value = data.quantity || 1;
+  quantityInput.value = 1; // Set default quantity value to 1
 
+  
   const widthInput = document.createElement("input");
   widthInput.type = "number";
-  widthInput.value = data.width || 1;
+  widthInput.value = 1; // Set default width value to 1
 
   const heightInput = document.createElement("input");
   heightInput.type = "number";
-  heightInput.value = data.height || 1;
-
+  heightInput.value = 1; // Set default height value to 1;
+  
   const costSpan = document.createElement("span");
-  costSpan.textContent = "";
-
-  const deleteButton = document.createElement("button");
-  deleteButton.textContent = "🗑";
-  deleteButton.onclick = () => {
-    productDiv.remove();
-    updateTotal();
-  };
-
-  const copyButton = document.createElement("button");
-  copyButton.textContent = "📋";
-  copyButton.onclick = () => {
-    const cloneData = {
-      description: descriptionInput.value,
-      category: categorySelect.value,
-      material: materialSelect.value,
-      caliber: caliberSelect.value,
-      quantity: quantityInput.value,
-      width: widthInput.value,
-      height: heightInput.value
-    };
-    createProductElement(cloneData);
-  };
-
-  function updateMaterialOptions() {
-    materialSelect.innerHTML = `<option disabled selected>Seleccione material</option>`;
-    if (categories[categorySelect.value]) {
+  
+  categorySelect.addEventListener("change", () => {
+      materialSelect.innerHTML = `<option disabled selected>Material</option>`;
       for (const material of categories[categorySelect.value]) {
-        materialSelect.innerHTML += `<option>${material}</option>`;
+          materialSelect.innerHTML += `<option>${material}</option>`;
       }
-    }
-  }
-
-  function updateCaliberOptions() {
-    caliberSelect.innerHTML = `<option disabled selected>Seleccione calibre</option>`;
-    if (materials[materialSelect.value]) {
+      
+      caliberSelect.innerHTML = `<option disabled selected>Caliber</option>`;
+      
+      updateCost();
+  });
+  
+  materialSelect.addEventListener("change", () => {
+      caliberSelect.innerHTML = `<option disabled selected>Caliber</option>`;
       for (const caliber of materials[materialSelect.value]) {
-        caliberSelect.innerHTML += `<option>${caliber}</option>`;
+          caliberSelect.innerHTML += `<option>${caliber}</option>`;
       }
-    }
-  }
+      
+      updateCost();
+  });
+  
+  caliberSelect.addEventListener("change", updateCost);
+  
+  quantityInput.addEventListener("input", updateCost);
 
+  widthInput.addEventListener("input", updateCost);
+  
+  heightInput.addEventListener("input", updateCost);
+  
   function updateCost() {
-    if (
-      categorySelect.value && materialSelect.value && caliberSelect.value &&
-      quantityInput.value && widthInput.value && heightInput.value
-    ) {
-      const price = prices[categorySelect.value]?.[materialSelect.value]?.[caliberSelect.value];
-      if (price) {
-        const cost = price * widthInput.value * heightInput.value * quantityInput.value;
-        costSpan.textContent = `$${cost}`;
-      } else {
-        costSpan.textContent = "";
-      }
+    if (categorySelect.value && materialSelect.value && caliberSelect.value && widthInput.value && heightInput.value && quantityInput.value) {
+      const pricePerUnitArea = prices[categorySelect.value][materialSelect.value][caliberSelect.value];
+      const area = widthInput.value * heightInput.value;
+      const quantity = quantityInput.value;
+      const cost = pricePerUnitArea * area * quantity;
+      
+      costSpan.textContent = `$${cost}`;
+      
+      updateTotal();
     } else {
       costSpan.textContent = "";
+      
+      updateTotal();
     }
-    updateTotal();
   }
-
-  categorySelect.addEventListener("change", () => {
-    updateMaterialOptions();
-    updateCaliberOptions();
-    updateCost();
-  });
-
-  materialSelect.addEventListener("change", () => {
-    updateCaliberOptions();
-    updateCost();
-  });
-
-  caliberSelect.addEventListener("change", updateCost);
-  quantityInput.addEventListener("input", updateCost);
-  widthInput.addEventListener("input", updateCost);
-  heightInput.addEventListener("input", updateCost);
-
-  // Si hay datos cargados, asignarlos
-  if (data.category) {
-    categorySelect.value = data.category;
-    updateMaterialOptions();
-    materialSelect.value = data.material;
-    updateCaliberOptions();
-    caliberSelect.value = data.caliber;
-    updateCost();
+  
+  
+  
+  function updateTotal() {
+    let totalCost = 0;
+    
+    for (const productDiv of productsDiv.querySelectorAll(".product")) {
+      if (productDiv.querySelector("span").textContent) {
+        const cost = parseFloat(productDiv.querySelector("span").textContent.slice(1));
+        const quantity = parseInt(productDiv.querySelector("input[type='number']").value);
+        totalCost += cost; // * quantity; // Update total cost considering quantity
+      }
+    }
+    
+    totalSpan.textContent = `$${totalCost}`;
   }
-
-  productDiv.append(
-    descriptionInput, categorySelect, materialSelect,
-    caliberSelect, quantityInput, widthInput, heightInput,
-    costSpan, copyButton, deleteButton
-  );
+  
+  
+  productDiv.appendChild(categorySelect);
+  productDiv.appendChild(materialSelect);
+  productDiv.appendChild(caliberSelect);
+  productDiv.appendChild(quantityInput); // Add the quantity input field
+  productDiv.appendChild(widthInput);
+  productDiv.appendChild(heightInput);
+  productDiv.appendChild(costSpan);
+  
   productsDiv.appendChild(productDiv);
-}
+});
 
-function updateTotal() {
-  let total = 0;
-  for (const span of productsDiv.querySelectorAll(".product span")) {
-    const value = parseFloat(span.textContent.replace("$", ""));
-    if (!isNaN(value)) total += value;
-  }
-  totalSpan.textContent = `$${total}`;
-}
 
-addButton.addEventListener("click", () => createProductElement());
-
-document.querySelector("#save").addEventListener("click", () => {
+// Save button click event
+const saveButton = document.querySelector("#save");
+saveButton.addEventListener("click", () => {
   const title = document.querySelector("#title").value.trim();
   const observations = document.querySelector("#observations").value.trim();
   const products = [];
 
-  if (!title) {
-    alert("Por favor ingresa un título.");
+  for (const productDiv of productsDiv.querySelectorAll(".product")) {
+    const category = productDiv.querySelector("select:nth-child(1)").value;
+    const material = productDiv.querySelector("select:nth-child(2)").value;
+    const caliber = productDiv.querySelector("select:nth-child(3)").value;
+    const width = productDiv.querySelector("input[type='number']:nth-child(4)").value;
+    const height = productDiv.querySelector("input[type='number']:nth-child(5)").value;
+    const cost = productDiv.querySelector("span").textContent.slice(1);
+
+    products.push({ category, material, caliber, width, height, cost });
+  }
+
+  if (title === "") {
+    alert("Please enter a title before saving.");
     return;
   }
 
-  for (const productDiv of productsDiv.querySelectorAll(".product")) {
-    const [description, cat, mat, cal] = productDiv.querySelectorAll("input, select");
-    const inputs = productDiv.querySelectorAll("input[type='number']");
-    const cost = productDiv.querySelector("span").textContent.replace("$", "");
+  const currentDate = new Date();
+  const year = currentDate.getFullYear().toString().slice(-2);
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+  const day = String(currentDate.getDate()).padStart(2, "0");
+  const hours = String(currentDate.getHours()).padStart(2, "0");
+  const minutes = String(currentDate.getMinutes()).padStart(2, "0");
+  const fileName = `COT_${year}${month}${day}_${hours}${minutes}_${title}.json`;
 
-    products.push({
-      description: description.value,
-      category: cat.value,
-      material: mat.value,
-      caliber: cal.value,
-      width: inputs[0].value,
-      height: inputs[1].value,
-      quantity: inputs[2].value,
-      cost
-    });
-  }
+  const data = { title, observations, products }
+  const jsonData = JSON.stringify(data, null, 2);
+  const blob = new Blob([jsonData], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
 
-  const now = new Date();
-  const fileName = `COT_${now.toISOString().slice(0, 16).replace(/[-T:]/g, '')}_${title}.json`;
-
-  const blob = new Blob([JSON.stringify({ title, observations, products }, null, 2)], { type: "application/json" });
   const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
+  link.href = url;
   link.download = fileName;
   link.click();
 });
 
-document.querySelector("#load").addEventListener("change", (event) => {
+
+// Load button change event
+const loadInput = document.querySelector("#load");
+loadInput.addEventListener("change", (event) => {
+  const file = event.target.files[0];
   const reader = new FileReader();
-  reader.onload = (e) => {
-    const data = JSON.parse(e.target.result);
+
+  reader.onload = (event) => {
+    const data = JSON.parse(event.target.result);
     document.querySelector("#title").value = data.title;
     document.querySelector("#observations").value = data.observations;
-    productsDiv.innerHTML = "";
-    data.products.forEach(p => createProductElement(p));
-  };
-  reader.readAsText(event.target.files[0]);
+
+    productsDiv.innerHTML = ""; // Clear existing products
+
+    data.products.forEach((product) => {
+      addButton.click(); // Add new product div
+      const productDiv = productsDiv.lastElementChild;
+
+      productDiv.querySelector("select:nth-child(1)").value = product.category;
+      productDiv.querySelector("select:nth-child(1)").dispatchEvent(new Event("change"));
+
+      productDiv.querySelector("select:nth-child(2)").value = product.material;
+      productDiv.querySelector("select:nth-child(2)").dispatchEvent(new Event("change"));
+
+      productDiv.querySelector("select:nth-child(3)").value = product.caliber;
+      productDiv.querySelector("select:nth-child(3)").dispatchEvent(new Event("change"));
+
+      productDiv.querySelector("input[type='number']:nth-child(4)").value = product.width;
+      productDiv.querySelector("input[type='number']:nth-child(4)").dispatchEvent(new Event("input"));
+
+      productDiv.querySelector("input[type='number']:nth-child(5)").value = product.height;
+      productDiv.querySelector("input[type='number']:nth-child(5)").dispatchEvent(new Event("input"));
+    });
+
+    // Update the cost once all products are loaded
+    updateTotal();
+  }
+
+  reader.readAsText(file);
 });
