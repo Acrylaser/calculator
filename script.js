@@ -852,199 +852,193 @@ const prices = {
   },
 };
 
-
-
-
-
-
 const productsDiv = document.querySelector("#products");
 const totalSpan = document.querySelector("#total");
 const addButton = document.querySelector("#add");
 
-addButton.addEventListener("click", () => {
+function createProductElement(data = {}) {
   const productDiv = document.createElement("div");
   productDiv.classList.add("product");
 
+  const descriptionInput = document.createElement("input");
+  descriptionInput.placeholder = "Descripción";
+  descriptionInput.value = data.description || "";
+
   const categorySelect = document.createElement("select");
-  categorySelect.innerHTML = `<option disabled selected>Seleccione</option>`;
+  categorySelect.innerHTML = `<option disabled selected>Seleccione categoría</option>`;
   for (const category in categories) {
-      categorySelect.innerHTML += `<option>${category}</option>`;
+    categorySelect.innerHTML += `<option>${category}</option>`;
   }
-  
+
   const materialSelect = document.createElement("select");
-  materialSelect.innerHTML = `<option disabled selected>Seleccione</option>`;
-  
+  materialSelect.innerHTML = `<option disabled selected>Seleccione material</option>`;
+
   const caliberSelect = document.createElement("select");
-  caliberSelect.innerHTML = `<option disabled selected>Seleccione</option>`;
+  caliberSelect.innerHTML = `<option disabled selected>Seleccione calibre</option>`;
 
   const quantityInput = document.createElement("input");
   quantityInput.type = "number";
-  quantityInput.value = 1; // Set default quantity value to 1
+  quantityInput.value = data.quantity || 1;
 
-  
   const widthInput = document.createElement("input");
   widthInput.type = "number";
-  widthInput.value = 1; // Set default width value to 1
+  widthInput.value = data.width || 1;
 
   const heightInput = document.createElement("input");
   heightInput.type = "number";
-  heightInput.value = 1; // Set default height value to 1;
-  
-  const costSpan = document.createElement("span");
-  
-  categorySelect.addEventListener("change", () => {
-      materialSelect.innerHTML = `<option disabled selected>Material</option>`;
-      for (const material of categories[categorySelect.value]) {
-          materialSelect.innerHTML += `<option>${material}</option>`;
-      }
-      
-      caliberSelect.innerHTML = `<option disabled selected>Caliber</option>`;
-      
-      updateCost();
-  });
-  
-  materialSelect.addEventListener("change", () => {
-      caliberSelect.innerHTML = `<option disabled selected>Caliber</option>`;
-      for (const caliber of materials[materialSelect.value]) {
-          caliberSelect.innerHTML += `<option>${caliber}</option>`;
-      }
-      
-      updateCost();
-  });
-  
-  caliberSelect.addEventListener("change", updateCost);
-  
-  quantityInput.addEventListener("input", updateCost);
+  heightInput.value = data.height || 1;
 
-  widthInput.addEventListener("input", updateCost);
-  
-  heightInput.addEventListener("input", updateCost);
-  
+  const costSpan = document.createElement("span");
+  costSpan.textContent = "";
+
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "🗑";
+  deleteButton.onclick = () => {
+    productDiv.remove();
+    updateTotal();
+  };
+
+  const copyButton = document.createElement("button");
+  copyButton.textContent = "📋";
+  copyButton.onclick = () => {
+    const cloneData = {
+      description: descriptionInput.value,
+      category: categorySelect.value,
+      material: materialSelect.value,
+      caliber: caliberSelect.value,
+      quantity: quantityInput.value,
+      width: widthInput.value,
+      height: heightInput.value
+    };
+    createProductElement(cloneData);
+  };
+
+  function updateMaterialOptions() {
+    materialSelect.innerHTML = `<option disabled selected>Seleccione material</option>`;
+    if (categories[categorySelect.value]) {
+      for (const material of categories[categorySelect.value]) {
+        materialSelect.innerHTML += `<option>${material}</option>`;
+      }
+    }
+  }
+
+  function updateCaliberOptions() {
+    caliberSelect.innerHTML = `<option disabled selected>Seleccione calibre</option>`;
+    if (materials[materialSelect.value]) {
+      for (const caliber of materials[materialSelect.value]) {
+        caliberSelect.innerHTML += `<option>${caliber}</option>`;
+      }
+    }
+  }
+
   function updateCost() {
-    if (categorySelect.value && materialSelect.value && caliberSelect.value && widthInput.value && heightInput.value && quantityInput.value) {
-      const pricePerUnitArea = prices[categorySelect.value][materialSelect.value][caliberSelect.value];
-      const area = widthInput.value * heightInput.value;
-      const quantity = quantityInput.value;
-      const cost = pricePerUnitArea * area * quantity;
-      
-      costSpan.textContent = `$${cost}`;
-      
-      updateTotal();
+    if (
+      categorySelect.value && materialSelect.value && caliberSelect.value &&
+      quantityInput.value && widthInput.value && heightInput.value
+    ) {
+      const price = prices[categorySelect.value]?.[materialSelect.value]?.[caliberSelect.value];
+      if (price) {
+        const cost = price * widthInput.value * heightInput.value * quantityInput.value;
+        costSpan.textContent = `$${cost}`;
+      } else {
+        costSpan.textContent = "";
+      }
     } else {
       costSpan.textContent = "";
-      
-      updateTotal();
     }
+    updateTotal();
   }
-  
-  
-  
-  function updateTotal() {
-    let totalCost = 0;
-    
-    for (const productDiv of productsDiv.querySelectorAll(".product")) {
-      if (productDiv.querySelector("span").textContent) {
-        const cost = parseFloat(productDiv.querySelector("span").textContent.slice(1));
-        const quantity = parseInt(productDiv.querySelector("input[type='number']").value);
-        totalCost += cost; // * quantity; // Update total cost considering quantity
-      }
-    }
-    
-    totalSpan.textContent = `$${totalCost}`;
+
+  categorySelect.addEventListener("change", () => {
+    updateMaterialOptions();
+    updateCaliberOptions();
+    updateCost();
+  });
+
+  materialSelect.addEventListener("change", () => {
+    updateCaliberOptions();
+    updateCost();
+  });
+
+  caliberSelect.addEventListener("change", updateCost);
+  quantityInput.addEventListener("input", updateCost);
+  widthInput.addEventListener("input", updateCost);
+  heightInput.addEventListener("input", updateCost);
+
+  // Si hay datos cargados, asignarlos
+  if (data.category) {
+    categorySelect.value = data.category;
+    updateMaterialOptions();
+    materialSelect.value = data.material;
+    updateCaliberOptions();
+    caliberSelect.value = data.caliber;
+    updateCost();
   }
-  
-  
-  productDiv.appendChild(categorySelect);
-  productDiv.appendChild(materialSelect);
-  productDiv.appendChild(caliberSelect);
-  productDiv.appendChild(quantityInput); // Add the quantity input field
-  productDiv.appendChild(widthInput);
-  productDiv.appendChild(heightInput);
-  productDiv.appendChild(costSpan);
-  
+
+  productDiv.append(
+    descriptionInput, categorySelect, materialSelect,
+    caliberSelect, quantityInput, widthInput, heightInput,
+    costSpan, copyButton, deleteButton
+  );
   productsDiv.appendChild(productDiv);
-});
+}
 
+function updateTotal() {
+  let total = 0;
+  for (const span of productsDiv.querySelectorAll(".product span")) {
+    const value = parseFloat(span.textContent.replace("$", ""));
+    if (!isNaN(value)) total += value;
+  }
+  totalSpan.textContent = `$${total}`;
+}
 
-// Save button click event
-const saveButton = document.querySelector("#save");
-saveButton.addEventListener("click", () => {
+addButton.addEventListener("click", () => createProductElement());
+
+document.querySelector("#save").addEventListener("click", () => {
   const title = document.querySelector("#title").value.trim();
   const observations = document.querySelector("#observations").value.trim();
   const products = [];
 
-  for (const productDiv of productsDiv.querySelectorAll(".product")) {
-    const category = productDiv.querySelector("select:nth-child(1)").value;
-    const material = productDiv.querySelector("select:nth-child(2)").value;
-    const caliber = productDiv.querySelector("select:nth-child(3)").value;
-    const width = productDiv.querySelector("input[type='number']:nth-child(4)").value;
-    const height = productDiv.querySelector("input[type='number']:nth-child(5)").value;
-    const cost = productDiv.querySelector("span").textContent.slice(1);
-
-    products.push({ category, material, caliber, width, height, cost });
-  }
-
-  if (title === "") {
-    alert("Please enter a title before saving.");
+  if (!title) {
+    alert("Por favor ingresa un título.");
     return;
   }
 
-  const currentDate = new Date();
-  const year = currentDate.getFullYear().toString().slice(-2);
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
-  const day = String(currentDate.getDate()).padStart(2, "0");
-  const hours = String(currentDate.getHours()).padStart(2, "0");
-  const minutes = String(currentDate.getMinutes()).padStart(2, "0");
-  const fileName = `COT_${year}${month}${day}_${hours}${minutes}_${title}.json`;
+  for (const productDiv of productsDiv.querySelectorAll(".product")) {
+    const [description, cat, mat, cal] = productDiv.querySelectorAll("input, select");
+    const inputs = productDiv.querySelectorAll("input[type='number']");
+    const cost = productDiv.querySelector("span").textContent.replace("$", "");
 
-  const data = { title, observations, products }
-  const jsonData = JSON.stringify(data, null, 2);
-  const blob = new Blob([jsonData], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
+    products.push({
+      description: description.value,
+      category: cat.value,
+      material: mat.value,
+      caliber: cal.value,
+      width: inputs[0].value,
+      height: inputs[1].value,
+      quantity: inputs[2].value,
+      cost
+    });
+  }
 
+  const now = new Date();
+  const fileName = `COT_${now.toISOString().slice(0, 16).replace(/[-T:]/g, '')}_${title}.json`;
+
+  const blob = new Blob([JSON.stringify({ title, observations, products }, null, 2)], { type: "application/json" });
   const link = document.createElement("a");
-  link.href = url;
+  link.href = URL.createObjectURL(blob);
   link.download = fileName;
   link.click();
 });
 
-
-// Load button change event
-const loadInput = document.querySelector("#load");
-loadInput.addEventListener("change", (event) => {
-  const file = event.target.files[0];
+document.querySelector("#load").addEventListener("change", (event) => {
   const reader = new FileReader();
-
-  reader.onload = (event) => {
-    const data = JSON.parse(event.target.result);
+  reader.onload = (e) => {
+    const data = JSON.parse(e.target.result);
     document.querySelector("#title").value = data.title;
     document.querySelector("#observations").value = data.observations;
-
-    productsDiv.innerHTML = ""; // Clear existing products
-
-    data.products.forEach((product) => {
-      addButton.click(); // Add new product div
-      const productDiv = productsDiv.lastElementChild;
-
-      productDiv.querySelector("select:nth-child(1)").value = product.category;
-      productDiv.querySelector("select:nth-child(1)").dispatchEvent(new Event("change"));
-
-      productDiv.querySelector("select:nth-child(2)").value = product.material;
-      productDiv.querySelector("select:nth-child(2)").dispatchEvent(new Event("change"));
-
-      productDiv.querySelector("select:nth-child(3)").value = product.caliber;
-      productDiv.querySelector("select:nth-child(3)").dispatchEvent(new Event("change"));
-
-      productDiv.querySelector("input[type='number']:nth-child(4)").value = product.width;
-      productDiv.querySelector("input[type='number']:nth-child(4)").dispatchEvent(new Event("input"));
-
-      productDiv.querySelector("input[type='number']:nth-child(5)").value = product.height;
-      productDiv.querySelector("input[type='number']:nth-child(5)").dispatchEvent(new Event("input"));
-    });
-
-    // Update the cost once all products are loaded
-    updateTotal();
-  }
-
-  reader.readAsText(file);
+    productsDiv.innerHTML = "";
+    data.products.forEach(p => createProductElement(p));
+  };
+  reader.readAsText(event.target.files[0]);
 });
