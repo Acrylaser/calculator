@@ -119,49 +119,82 @@ input[type="file"] {
 @media (max-width: 480px) {
   .product {
     flex-direction: column;
-    gap: 6px;
-    padding: 6px;
+    gap: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+    margin-bottom: 2px;
   }
 
   .product input,
   .product select {
     min-width: 100%;
-    font-size: 12px;
-    padding: 5px 8px;
+    font-size: 10px;
+    padding: 0 !important;
     margin: 0;
-    height: 32px;
+    height: 22px !important;
+    min-height: 22px !important;
+    max-height: 22px !important;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-sizing: border-box;
+    line-height: 1.1;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 
-  .product button {
-    width: 48%;
-    margin: 2px 1%;
-    font-size: 15px;
-    padding: 7px 0;
+  .product input[type="number"] {
+    font-size: 10px;
+    padding: 0 !important;
+    height: 22px !important;
+    min-height: 22px !important;
+    max-height: 22px !important;
+    appearance: textfield;
+  }
+
+  .product input::placeholder {
+    font-size: 10px;
   }
 
   .product span {
-    font-size: 14px;
-    padding: 4px 0;
+    font-size: 10px;
+    padding: 0;
     min-width: unset;
     text-align: left;
+    line-height: 1.1;
+  }
+
+  /* Botones vuelven a tamaño normal */
+  .product button {
+    width: 48%;
+    margin: 1px 1%;
+    font-size: 13px;
+    padding: 6px 0;
+    border-radius: 2px;
   }
 
   button#add, #save {
-    font-size: 14px;
-    padding: 10px;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 6px;
   }
 
   #products {
-    margin-bottom: 12px;
+    margin-bottom: 2px;
   }
 }
 
-/* Opcional: reducir el tamaño de los select y input en general en móvil */
 @media (max-width: 350px) {
   .product input,
   .product select {
-    font-size: 11px;
-    height: 28px;
-    padding: 4px 6px;
+    font-size: 9px;
+    height: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+    padding: 0 !important;
+    border-radius: 1px;
   }
 }
