@@ -119,18 +119,49 @@ input[type="file"] {
 @media (max-width: 480px) {
   .product {
     flex-direction: column;
+    gap: 6px;
+    padding: 6px;
   }
 
   .product input,
   .product select {
     min-width: 100%;
+    font-size: 12px;
+    padding: 5px 8px;
+    margin: 0;
+    height: 32px;
   }
 
   .product button {
-    width: 100%;
+    width: 48%;
+    margin: 2px 1%;
+    font-size: 15px;
+    padding: 7px 0;
   }
 
-  button#add {
-    margin-top: 10px;
+  .product span {
+    font-size: 14px;
+    padding: 4px 0;
+    min-width: unset;
+    text-align: left;
+  }
+
+  button#add, #save {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #products {
+    margin-bottom: 12px;
+  }
+}
+
+/* Opcional: reducir el tamaño de los select y input en general en móvil */
+@media (max-width: 350px) {
+  .product input,
+  .product select {
+    font-size: 11px;
+    height: 28px;
+    padding: 4px 6px;
   }
 }

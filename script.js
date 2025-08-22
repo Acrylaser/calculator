@@ -16,7 +16,7 @@ const categories = {
   "Pet-G 100x200": ['Cristal'],
   "PP a medida": ['Natural (Hielo)', 'Color'],
   "PP 100x200": ['Natural (Hielo)', 'Color'],
-  "ABS": ['Silver', 'Otros'],
+  "ABS": ['2.5mm'],
   "Eléctricos": ['Neón Flex', 'Fuente'],
   "Herrajes": ['Cerradura', 'Bisagra Acrílica', 'Dilatador'],
   "Letras Volumétrica": ['Color_LC', 'Brush (Silver)_LC'],
@@ -60,8 +60,7 @@ const materials = {
   "Cristal": ['40 (1 mm)', '60 (1.5 mm)', '80 (2 mm)', '100 (2.5 mm)', '120 (3 mm)', '180 (4.5 mm)'],
   "Natural (Hielo)": ['20 (0.5 mm)', '30 (0.75 mm)', '40 (1 mm)', '60 (1.5 mm)', '80 (2 mm)', '120 (3 mm)', '160 (4 mm)', '200 (5 mm)', '240 (6 mm)'],
   "Color": ['20 (0.5 mm)'],
-  "Silver": ['2.5mm'],
-  "Otros": ['2.5mm'],
+  "2.5mm": ['A medida', 'Lámina (120x60)'],
   "Neón Flex": ['Metro instalado', 'Metro suelto'],
   "Fuente": ['12V-1A', '12V-2A', '12V-3A', '12V-5A', '12V-10A'],
   "Cerradura": ['Grande', 'Pequeña'],
@@ -770,11 +769,9 @@ const prices = {
     },
   },
   "ABS": {
-    "Silver": {
-      "2.5mm": 20.0,
-    },
-    "Otros": {
-      "2.5mm": 16.5,
+    "2.5mm": {
+      "A medida": 25.5,
+      "Lámina (120x60)": 169050.0,
     },
   },
   "Eléctricos": {
@@ -851,6 +848,7 @@ const prices = {
     },
   },
 };
+
 
 const productsDiv = document.querySelector("#products");
 const totalSpan = document.querySelector("#total");
